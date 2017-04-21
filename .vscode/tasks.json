@@ -1,0 +1,21 @@
+// See https://go.microsoft.com/fwlink/?LinkId=733558
+// for the documentation about the tasks.json format
+
+// Sass configuration
+// {
+//     "version": "0.1.0",
+//     "command": "node-sass",
+//     "isShellCommand": true,
+//     "args": ["./src/styles.scss", "./src/styles.css", "./src/app/app.component.scss", "./src/app/app.component.css"]
+//     //, "/src/app/app.component.scss", "/src/app/app.component.css"
+// }
+
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "echo",
+    "isShellCommand": true,
+    "args": ["Hello World"],
+    "showOutput": "always"
+}

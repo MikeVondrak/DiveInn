@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Dive Inn Angular CLI';
+  title = 'The Dive Inn';
   ngOnInit() {
-    // stuff
+    let i = "catbutt";
+    //alert("Loaded");
   }
 }
