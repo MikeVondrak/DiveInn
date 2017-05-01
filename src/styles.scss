@@ -42,44 +42,10 @@ h1 { font-family: 'Yanone Kaffeesatz', sans-serif; }
   clear: both;
 }
 
-
-#pre-bootstrap {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;   
-    background: $color_DiveBlack;
-
-    opacity: 0;
-    transition: opacity 1s ease-in-out, z-index 1s linear;
-    z-index: 0;
-    //display: none;
-}
-    #pre-bootstrap h1 {
-        position: relative;
-        top: 30%;
-        color: $color_TextLt;
-        text-align: center;
-
-        font-family: 'Bevan', cursive;
-        font-size: 3em;
-        font-weight: 100;
-        letter-spacing: 3px;
-        text-shadow: 2px 2px $color_TextShadowLt;
-        @media screen and (max-width: $width_PhonePortrait) {
-            font-size: 2em;
-        }
-    }
-
 app-root {
     position: relative;
     z-index: 1;
 
-    &:empty + #pre-bootstrap {
-        opacity: 1;
-        z-index: 7;
-    }
 
     > div {
         //background: #00f;
@@ -99,7 +65,9 @@ app-root {
                 width: 45%;
             }
             @media screen and (max-width: $width_PhonePortrait) {
+                display: block;
                 width: 90%;
+                margin: 0.5em auto;
             }
         }
 
