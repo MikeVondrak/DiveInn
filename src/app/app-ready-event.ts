@@ -77,13 +77,10 @@ export class AppReadyEvent {
             );
 
         } catch ( error ) {
-            console.log("createEvent: standard event definition failed");
+            console.log("createEvent: standard event definition failed, trying IE initCustomEvent");
             var customEvent: any = this.doc.createEvent( "CustomEvent" );
-            console.log("createEvent: IE event var created");
             customEvent.initCustomEvent( eventType, bubbles, cancelable, null );
-            console.log("createEvent: IE event definition done");
         }
-        console.log("createEvent: done");
         return( customEvent );
     }
 }
