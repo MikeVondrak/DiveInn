@@ -41,12 +41,12 @@ const routes: Routes = [
             },
             {
                 path: "",
-                outlet: "leftArea",
+                outlet: "leftSidebar",
                 component: SidebarLeftComponent
             },
             {
                 path: "",
-                outlet: "rightArea",
+                outlet: "rightSidebar",
                 component: SidebarRightComponent
             }
         ]
@@ -61,12 +61,12 @@ const routes: Routes = [
             },
             {
                 path: "",
-                outlet: "leftArea",
+                outlet: "leftSidebar",
                 component: SidebarLeftComponent
             },
             {
                 path: "",
-                outlet: "rightArea",
+                outlet: "rightSidebar",
                 component: SidebarRightComponent
             }
         ]

@@ -1,16 +1,16 @@
-<div id="leftArea">
-  <h1>Left SideBar</h1>
+<app-header></app-header>
+
+<div id="leftSidebar">
   <router-outlet name="leftSidebar"></router-outlet>
 </div>
-<div id="mainArea">
-  
-  <nav-main></nav-main>
 
-  <h1>Main Content - 3 Column Layout</h1>
+<div id="mainArea">
+  <nav-main></nav-main>
   <router-outlet></router-outlet>
 </div>
-<div id="rightArea">
-  <h1>Right Sidebar</h1>
+
+<div id="rightSidebar">
   <router-outlet name="rightSidebar"></router-outlet>
 </div>
 
+<app-footer></app-footer>
