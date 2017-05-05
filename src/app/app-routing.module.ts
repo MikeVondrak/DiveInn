@@ -33,7 +33,7 @@ const routes: Routes = [
     },
     { 
         path: "DiveLog", 
-        component: Layout1columnComponent,
+        component: Layout3columnsComponent,
         children: [
             {
                 path: "",
@@ -53,7 +53,7 @@ const routes: Routes = [
     },
     { 
         path: "WhatsInside", 
-        component: Layout3columnsComponent,
+        component: Layout1columnComponent,
         children: [
             {
                 path: "",

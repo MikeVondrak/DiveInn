@@ -1,0 +1,30 @@
+@import '../../../scss_variables';
+
+div[left] {
+    h3 {
+        margin: -1.5em 0 1em 17.5em;
+    }
+    p { text-align: center; }
+}
+div[right] {
+    //margin: auto;
+    align-self: center;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+
+        img {
+            border: 0.5em solid $color_TextRed;
+            border-radius: 1em;
+        }
+
+        h1 {
+            text-align: left;
+            display: inline-block;
+            margin: 1em 0 0 0.5em;
+            line-height: 1;
+            vertical-align: top;
+        }
+    }
+}

@@ -1,16 +1,24 @@
-<app-header></app-header>
+<div id="pageContainer">
 
-<div id="leftSidebar">
-  <router-outlet name="leftSidebar"></router-outlet>
+  <app-header></app-header>
+  
+  <div id="columnsContainer">
+    
+    <div id="mainContent">
+      <nav-main></nav-main>
+      <router-outlet></router-outlet>
+    </div>
+
+    <div id="leftSidebar">
+      <router-outlet name="leftSidebar"></router-outlet>
+    </div>
+
+    <div id="rightSidebar">
+      <router-outlet name="rightSidebar"></router-outlet>
+    </div>
+  
+  </div>
+
+  <app-footer></app-footer>
+
 </div>
-
-<div id="mainArea">
-  <nav-main></nav-main>
-  <router-outlet></router-outlet>
-</div>
-
-<div id="rightSidebar">
-  <router-outlet name="rightSidebar"></router-outlet>
-</div>
-
-<app-footer></app-footer>

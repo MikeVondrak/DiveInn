@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { NavMainComponent } from '../../nav/nav-main/nav-main.component';
+//import { NavMainComponent } from '../../nav/nav-main/nav-main.component';
 
 @Component({
   selector: 'app-layout3columns',

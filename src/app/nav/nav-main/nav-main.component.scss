@@ -1,0 +1,23 @@
+@import "../../../scss_mixins";
+@import "../../../scss_variables";
+
+nav {
+    @if $debug_layout { background: rgba(255,255,255,0.25); }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 1em;
+        @include group;
+
+        li {
+            float: left;
+            margin-right: 1em;
+            font-size: 2em;
+
+            a {
+                color: #29e;
+            }
+        }
+    }
+}

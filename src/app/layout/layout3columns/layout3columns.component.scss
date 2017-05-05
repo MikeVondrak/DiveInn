@@ -1,6 +1,59 @@
-#leftSidebar { 
-    background-color: rgba(255,0,0,0.5);
+@import '../../../scss_variables.scss';
+@import '../../../scss_mixins.scss';
+
+// pageContainer wraps the entire page area including header and footer
+// outermost flex context
+#pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    @if $debug_containers { border: 1px solid #80f; }
+
+    > app-header > header {
+        border: 3px dashed green;
+        height: $height_Header;
+    }
+
+    > app-footer > footer { color: red; }
+
+    #columnsContainer {
+        flex: 1;            // expand columns to fill page
+        display: flex;      // horizontal flex for content/sidebar positioning
+        flex-direction: row;
+        width: 100%;
+        z-index: 1;
+
+        @if $debug_containers { border: 1px solid #0ff; }
+
+        #mainContent {
+            //display: flex;  // for centering content
+            width: 1200px;
+
+            @if $debug_layout { background: rgba(0,0,255,0.25); }
+        }
+
+        #leftSidebar { 
+            flex: 1;
+            display: flex;  // for centering content
+
+            margin-top: $height_LeftSidebarOffset;
+
+            @if $debug_layout { background-color: rgba(255,0,0,0.15); }
+        }
+        #rightSidebar {
+            flex: 1;
+            display: flex;  // for centering content
+
+            @if $debug_layout { background-color: rgba(0,255,0,0.15); }
+        }
+    }
 }
-#rightSidebar {
-    background-color: rgba(0,255,0,0.5);
+
+/* minimum screen width to begin using 3 columns side-by-side */
+@media all and (min-width: 1024px) {
+    // redefine order of elements for 3 columns
+    #leftSidebar    { order: 1; }
+    #mainContent    { order: 2; }
+    #rightSidebar   { order: 3; }
 }

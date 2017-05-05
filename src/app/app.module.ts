@@ -25,6 +25,9 @@ import { NavMainComponent }           from './nav/nav-main/nav-main.component'
 import { HomeComponent }              from './pages/home/home.component';
 import { DiveLogComponent }           from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.component';
+import { ContentBoxComponent } from './pages/shared/content-box/content-box.component';
+import { CalloutComponent } from './sidebars/callout/callout.component';
+import { ContentLayoutComponent } from './pages/shared/content-layout/content-layout.component';
 
 @NgModule({
   imports: [
@@ -44,7 +47,10 @@ import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.co
     DiveLogComponent,
     WhatsInsideComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContentBoxComponent,
+    CalloutComponent,
+    ContentLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

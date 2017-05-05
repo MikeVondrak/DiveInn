@@ -1,0 +1,19 @@
+@import '../../../scss_variables.scss';
+
+// target the host element ("app-sidebar-left", "app-sidebar-right", etc)
+:host { 
+    flex: 1;    // set flex on host element to allow child 
+    margin: 0 auto;
+}
+
+.sidebar {
+    width: 12em;
+    min-height: 30em;
+    margin: auto;   // inside flex container centers both horizontally and vertically
+
+    border: 3px solid;
+    border-radius: 1em;
+    background-color: $color_DiveBlack;
+
+    padding: 1em;
+}
