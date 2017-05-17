@@ -5,18 +5,66 @@ nav {
     @if $debug_layout { background: rgba(255,255,255,0.25); }
 
     ul {
+    //     //position: relative;
+    //     //z-index: 0;
+        display: flex;
+        justify-content: space-between;
+    //     width: 100%;
+
         list-style-type: none;
         margin: 0;
-        padding: 1em;
-        @include group;
+        padding: 0;
 
-        li {
-            float: left;
-            margin-right: 1em;
-            font-size: 2em;
+       li {
+            position: relative;
+            top: 0.25em;
+            flex: 1;
+    //         z-index: 1;
+            min-height: 5em;
+            margin-top: 3em;
+            transform: rotateZ(2deg);
 
+            &:nth-child(even) { 
+               min-height: 8em;
+               margin-top: 0;
+               transform: rotateZ(-5deg);
+
+               //a { transform: translateX(-50%) rotateZ(-2deg); }
+            }
+            &:nth-child(3n) { transform: rotateZ(-2deg); }
+            &:nth-child(4n) { transform: rotateZ(3deg); }
+    //         text-align: center;
+            background: transparent url('../../../assets/img/signPost.png') no-repeat 50% 0;
+            
             a {
-                color: #29e;
+                //transform-origin: 0.0;
+                display: block;
+                text-align: center;
+                margin: 0.75em 0 0 0;
+                padding: 0.25em 1em;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%) scale(1);// rotateZ(2deg);
+                white-space: nowrap;
+    //             z-index: 2;
+                background: transparent url('../../../assets/img/signLeft.png') no-repeat;
+                background-size: 100% 100%;
+                font-size: 1.5em;
+                font-weight: bold;
+                text-shadow: -1px -1px 2px $color_DiveGrey, -1px -1px 1px $color_DiveBlack, 1px 1px 1px #caa;
+                color: #777;
+                color: $color_TextRed;
+                color: #a81919;
+                transition: all 0.1s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                    text-shadow: -1px -1px 2px $color_DiveGrey, -1px -1px 1px $color_DiveBlack, 0px 0px 10px #f99;
+                    transform: translateX(-50%) scale(1.1);
+                }
+    //             height: 113px;
+    //             width: 163px;
+    //             color: #29e;
             }
         }
     }

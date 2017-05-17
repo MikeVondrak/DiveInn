@@ -29,6 +29,8 @@ import { ContentBoxComponent } from './pages/shared/content-box/content-box.comp
 import { CalloutComponent } from './sidebars/callout/callout.component';
 import { ContentLayoutComponent } from './pages/shared/content-layout/content-layout.component';
 
+import { NotFoundComponent } from './pages/not-found/not-found.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { ContentLayoutComponent } from './pages/shared/content-layout/content-la
     FooterComponent,
     ContentBoxComponent,
     CalloutComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    NotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
