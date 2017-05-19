@@ -16,6 +16,7 @@
         flex: 1 0 auto;     // expand columns to fill page, ** explicit declaration for IE11 - flex: 1; shorthand will cause footer to not be sticky **
         display: flex;      // horizontal flex for content/sidebar positioning
         flex-direction: row;
+        flex-wrap: wrap;
         //width: 100%;
         //height: 100%;
         //z-index: 1;
@@ -24,22 +25,37 @@
 
         #mainContent {
             //display: flex;  // for centering content
-            width: 1200px;
+            //width: 1200px;
+            //flex: 10;
+            width: 100%;
+            margin: 0 auto;
             height: 100%;
+
+            //font-size: 100%;
+            @media all and (min-width: $width_Screen480) { width: 98%; }
+            @media all and (min-width: $width_Screen640) { width: 97%; }
+            @media all and (min-width: $width_Screen800) { width: 96%; }
+            @media all and (min-width: $width_Screen960) { width: 95%; }
+            @media all and (min-width: $width_Screen1024) { width: 92%; }
+            @media all and (min-width: $width_Screen1280) { width: 90%; }
+            @media all and (min-width: $width_Screen1440) { flex: 5; width: 100%; flex-wrap: nowrap; }
+            @media all and (min-width: $width_Screen1680) { flex: 6; }
+            @media all and (min-width: $width_Screen1920) { flex: 7; }            
+            @media all and (min-width: $width_Screen2560) { flex: 8; }
 
             @if $debug_layout { background: rgba(0,0,255,0.25); }
         }
 
         #leftSidebar { 
-            flex: 1;
+            flex: 2;
             display: flex;  // for centering content
 
-            margin-top: $height_LeftSidebarOffset;
+            @media all and (min-width: $width_Screen1440) { margin-top: $height_LeftSidebarOffset; }
 
             @if $debug_layout { background-color: rgba(255,0,0,0.15); }
         }
         #rightSidebar {
-            flex: 1;
+            flex: 2;
             display: flex;  // for centering content
 
             @if $debug_layout { background-color: rgba(0,255,0,0.15); }
@@ -48,7 +64,7 @@
 }
 
 /* minimum screen width to begin using 3 columns side-by-side */
-@media all and (min-width: 1024px) {
+@media all and (min-width: $width_Screen1440) {
     // redefine order of elements for 3 columns
     #leftSidebar    { order: 1; }
     #mainContent    { order: 2; }

@@ -1,18 +1,23 @@
 @import '../../../scss_variables';
 
+//div { border: 1px solid green; }
+
 div[left] {
+    margin-bottom: 1em;
     h3 {
-        margin: -1.5em 0 1em 17.5em;
+        margin: -1em 0 1em 0;
+        text-align: right;
     }
     p { text-align: center; }
 }
 div[right] {
-    //margin: auto;
-    align-self: center;
-    text-align: center;
+    align-self: center;     // center vertically
+    text-align: center;     // center horizontally
 
     a {
+        display: inline-block;
         text-decoration: none;
+        color: $color_TextRed;
 
         img {
             border: 0.5em solid $color_TextRed;
@@ -25,6 +30,14 @@ div[right] {
             margin: 1em 0 0 0.5em;
             line-height: 1;
             vertical-align: top;
+        }
+
+        &:hover {
+            color: $color_DiveRed;
+            img { border: 0.5em solid $color_DiveRed; }
+            h1 {
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -31,9 +31,7 @@
         
         h1 {
             position: absolute;
-            //flex: 1;// 0 auto;
-            //margin: auto;       // inside flexbox context this centers horizontally and vertically, except in IE11 of course
-            //margin: 0;
+            margin: 0;      // need for Firefox
             z-index: 3;            
             padding: 0.2em 0.5em 0.1em 0.5em;
             background: url('../../../../assets/img/contentTitle.png');
