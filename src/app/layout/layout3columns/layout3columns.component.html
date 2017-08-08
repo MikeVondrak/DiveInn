@@ -1,30 +1,12 @@
-<!-- http://www.design-fluide.com/wp-content/demos/sticky-footer-flexbox-oldies.html -->
-<!-- flex container for IE11 flexbox sticky footer -->
-<div id="flexContainer">
+<main>
+  <app-nav-main></app-nav-main>
+  <router-outlet></router-outlet> 
+</main>
 
-  <div id="pageContainer">
+<div id="side1" class="sidebar">
+  <router-outlet name="sidebar1"></router-outlet>
+</div>
 
-    <app-header></app-header>
-    
-    <div id="columnsContainer">
-      
-      <div id="mainContent">
-        <nav-main></nav-main>
-        <router-outlet></router-outlet>
-      </div>
-
-      <div id="leftSidebar">
-        <router-outlet name="leftSidebar"></router-outlet>
-      </div>
-
-      <div id="rightSidebar">
-        <router-outlet name="rightSidebar"></router-outlet>
-      </div>
-    
-    </div>
-
-    <app-footer></app-footer>
-
-  </div>
-
+<div id="side2" class="sidebar">
+  <router-outlet name="sidebar2"></router-outlet>
 </div>

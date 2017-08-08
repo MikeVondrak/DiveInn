@@ -1,3 +1,14 @@
-<div id="appContainer">
-  <router-outlet></router-outlet>
-</div>
+<!-- :host element created by angular (in this case "app-root" element)
+  use as flexbox container for page (header, content layouts, sticky footer) -->
+
+  <app-site-header></app-site-header>
+
+  <div id="site-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-site-footer></app-site-footer>
+
+<!-- end :host element from angular -->
+<!-- todo: could move header/footer into the layout or set up an additional routing layer if a different header/footer is needed on a particular page -->
+<!-- todo: would require moving flexbox scss -->

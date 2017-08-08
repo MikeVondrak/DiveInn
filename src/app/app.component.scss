@@ -1,5 +1,14 @@
-#appContainer {
-    height: 100%;
+@import '../scss_variables.scss';
 
-    //border: 1px solid #f0f;
+// :host element = app-root
+:host {
+    display: flex;  // set up flexbox for sticky footer
+    flex-direction: column;
+    height: 100%;   // avoid min-height w/flexbox for IE10-11, % instead of vh for older Safari
+
+    #site-content {
+        flex: 1 0 auto;     // #site-content flexes to fill area between site-header and site-footer components, explicit flex values for all args for IE10+/Safari to work
+
+        @if $debug_appFrame { background: $color_debug4; }
+    }
 }

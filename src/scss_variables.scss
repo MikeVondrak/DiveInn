@@ -1,5 +1,4 @@
-
-$debug_containers: false;
+$debug_appFrame: false;
 $debug_layout: false;
 
 // media query widths
@@ -25,11 +24,15 @@ $width_Screen2560: 2560px;
 
 $height_Header: 12em;
 $height_Footer: 5em;
+//$height_LeftSidebarOffset: 6%;
 $height_LeftSidebarOffset: 8em;
+
+$width_Sidebar_3col: 15%;
 
 /*******************************************/
 
 $color_BodyBg: #000;
+$color_FooterBg: hsla(0,0%,0%,0.4);
 
 $color_DiveBlack: #231f20;
 $color_DiveRed: #ed1b24;
@@ -45,3 +48,12 @@ $color_TextRed: #b82929;
 $color_TextShadowLt: #777;
 
 $color_SectionBg: #fcf9f9;
+
+$color_debug1: hsla(0,100%,50%,0.35);
+$color_debug2: hsla(45,100%,50%,0.35);
+$color_debug3: hsla(90,100%,50%,0.35);
+$color_debug4: hsla(135,100%,50%,0.35);
+$color_debug5: hsla(180,100%,50%,0.35);
+$color_debug6: hsla(225,100%,50%,0.35);
+$color_debug7: hsla(270,100%,50%,0.35);
+$color_debug8: hsla(315,100%,50%,0.35);

@@ -13,8 +13,6 @@ body {
     background-color: $color_BodyBg;
     font-size: 100%;
     font-family: 'Ubuntu Condensed', sans-serif;
-    
-    @if $debug_containers { border: 3px solid blue; }
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -38,23 +36,6 @@ a {
   display: table;
   clear: both;
 }
-
-/*****
- need height 100% on all elements up to pageContainer
- todo: all angular elements need display block??
-    <app-root>
-        <div appContainer>
-            <router-outlet>
-            <app-layout>
-                <div pageContainer>
-*/
-app-root {
-    display: block;
-    height: 100%;
-    
-    @if $debug_containers { border: 1px solid red; }
-}
-    
 
 /*************************************************/
 

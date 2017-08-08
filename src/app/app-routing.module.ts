@@ -11,68 +11,35 @@ import { DiveLogComponent } from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent } from './pages/whats-inside/whats-inside.component';
 
 const routes: Routes = [
-    { 
+    {
         path: "Home",
         component: Layout3columnsComponent,
         children: [
-            {
-                path: "",
-                component: HomeComponent
-            },
-            {
-                path: "",
-                outlet: "leftSidebar",
-                component: SidebarLeftComponent
-            },
-            {
-                path: "",
-                outlet: "rightSidebar",
-                component: SidebarRightComponent
-            }
+            {   path: "", component: HomeComponent  },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
         ]
     },
     { 
         path: "DiveLog", 
         component: Layout3columnsComponent,
         children: [
-            {
-                path: "",
-                component: DiveLogComponent
-            },
-            {
-                path: "",
-                outlet: "leftSidebar",
-                component: SidebarLeftComponent
-            },
-            {
-                path: "",
-                outlet: "rightSidebar",
-                component: SidebarRightComponent
-            }
+            {   path: "", component: DiveLogComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
         ]
     },
     { 
         path: "WhatsInside", 
-        component: Layout1columnComponent,
+        component: Layout3columnsComponent,
         children: [
-            {
-                path: "",
-                component: WhatsInsideComponent
-            },
-            {
-                path: "",
-                outlet: "leftSidebar",
-                component: SidebarLeftComponent
-            },
-            {
-                path: "",
-                outlet: "rightSidebar",
-                component: SidebarRightComponent
-            }
+            {   path: "", component: WhatsInsideComponent },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar2" }
         ]
     },
-    { path: "", redirectTo: "/Home", pathMatch: "full" },
-    { path: "**", redirectTo: "/Home" }
+    {   path: "", redirectTo: "/Home", pathMatch: "full" },
+    {   path: "**", redirectTo: "/Home" }
 ];
 
 @NgModule({
@@ -82,3 +49,8 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 export const routingComponents = [HomeComponent, DiveLogComponent, WhatsInsideComponent];
+export const navRoutes = [
+                { display: "Home", routeStr: "Home" },
+                { display: "Dive Log", routeStr: "DiveLog" },
+                { display: "What's Inside", routeStr: "WhatsInside" }
+            ];

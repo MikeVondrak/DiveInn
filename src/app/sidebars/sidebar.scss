@@ -7,7 +7,8 @@
 }
 
 .sidebar {
-    width: 180px;
+    width: 80%;
+    max-width: 220px;
     min-height: 30em;
     margin: auto;   // inside flex container centers both horizontally and vertically
 
