@@ -1,0 +1,23 @@
+@import '../../../scss_variables.scss';
+
+:host {
+    //display: inline-block;
+    flex: 1 1 120px;
+    max-width: 220px;
+    //margin: 0 auto 3em auto;
+    margin: 0 1em 3em 1em;
+
+    @media screen and (min-width: $width_Screen1440) { margin: 0 0 3em 0; }
+
+    & > div {   // text callout
+        padding: 1em;
+        border: 3px solid;
+        border-radius: 0.5em;
+        width: 100%;
+        max-width: 220px;
+    }
+    & > img { // image callout
+        width: 100%;
+        max-width: 220px;
+    }
+}

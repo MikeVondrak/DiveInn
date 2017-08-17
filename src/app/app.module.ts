@@ -5,8 +5,10 @@ import { HttpModule }     from '@angular/http';
 
 import { AppRoutingModule }           from './app-routing.module';
 import { AppComponent }               from './app.component';
-import { SiteHeaderComponent }            from './layout/site-header/site-header.component';
-import { SiteFooterComponent }            from './layout/site-footer/site-footer.component';
+import { NgIfMediaQuery }             from './directives/angular2-if-media-query.directive';
+
+import { SiteHeaderComponent }        from './layout/site-header/site-header.component';
+import { SiteFooterComponent }        from './layout/site-footer/site-footer.component';
 
 // test layout with no header/footer and 1 column
 import { Layout1columnComponent }     from './layout/layout1column/layout1column.component';
@@ -54,9 +56,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ContentBoxComponent,
     CalloutComponent,
     ContentLayoutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NgIfMediaQuery
   ],
-  providers: [],
+  providers: [NgIfMediaQuery],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,14 +3,20 @@
 
 :host {
     margin-top: 2em;
-
     background: $color_FooterBg;
+
+    // todo: fix for IE11, :host does not cover footer element bg after section(s) float down a row
+    //@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {}
+
+    @if $debug_appFrame { background: $color_debug5; }
 }
 
 footer {
     position: relative;     // for absolute img
     @include group;
     padding: 1em;
+    //background: $color_FooterBg;
+    @if $debug_appFrame { background: $color_debug7; }
 
     @media screen and (min-width: $width_Screen1440) {
         margin: 0 $width_Sidebar_3col;      // 15% margin to match center column width
@@ -33,7 +39,9 @@ footer {
         padding: 0;
         list-style-type: none;
 
-        &.socialMediaLinks {
+        // CANNOT USE CLASS NAME "socialMediaLinks", removed by AdBlock in Firefox
+        //&.socialMediaLinks {
+        &.externalSocMedLinks {
             @include group;
             li { 
                 float: left;
@@ -44,12 +52,13 @@ footer {
                     height: 32px;
                     background: url('../../../assets/img/social-sprite.png') 0 0;
 
-                    // .googleplus is 0 0
-                    &.facebook      { background: url('../../../assets/img/social-sprite.png') -32px 0; }
-                    &.yelp          { background: url('../../../assets/img/social-sprite.png') -64px 0; }
-                    &.foursquare    { background: url('../../../assets/img/social-sprite.png') -96px 0; }
-                    &.twitter       { background: url('../../../assets/img/social-sprite.png') -128px 0; }
-                    &.pinterest     { background: url('../../../assets/img/social-sprite.png') -160px 0; }
+
+                    &.gagglaplas       { background: url('../../../assets/img/social-sprite.png') 0 0; } // CANNOT USE CLASS NAME "googleplus", removed by AdBlock in Firefox
+                    &.fucebuuk      { background: url('../../../assets/img/social-sprite.png') -32px 0; }
+                    &.yalp          { background: url('../../../assets/img/social-sprite.png') -64px 0; }
+                    &.fiirsqiire    { background: url('../../../assets/img/social-sprite.png') -96px 0; }
+                    &.twattar       { background: url('../../../assets/img/social-sprite.png') -128px 0; }
+                    &.punturust     { background: url('../../../assets/img/social-sprite.png') -160px 0; }
                 }
             }
         }
@@ -66,5 +75,4 @@ footer {
         }
     }
 
-    @if $debug_appFrame { background: $color_debug6; }
 }

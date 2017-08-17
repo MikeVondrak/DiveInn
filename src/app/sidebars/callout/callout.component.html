@@ -1,3 +1,13 @@
-<p>
-  callout works!
-</p>
+<div *ngIf="imgSrc ==''; then textCallout else imageCallout"></div>
+<ng-template #textCallout>
+  <div>
+    <h1>{{title}}</h1>
+    <p>{{copyText}}</p>
+  </div>
+</ng-template>
+<ng-template #imageCallout>
+  <img [src]="imgSrc" [alt]="imgAlt" [title]="title"/>
+</ng-template>
+
+<!-- <ng-content></ng-content> -->
+

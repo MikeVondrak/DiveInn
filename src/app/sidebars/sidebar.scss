@@ -1,20 +1,27 @@
 @import '../../../scss_variables.scss';
+@import '../../../scss_mixins.scss';
 
 // target the host element ("app-sidebar-left", "app-sidebar-right", etc)
 :host { 
-    flex: 1;    // set flex on host element to allow child 
-    margin: 0 auto;
-}
 
-.sidebar {
-    width: 80%;
-    max-width: 220px;
-    min-height: 30em;
-    margin: auto;   // inside flex container centers both horizontally and vertically
+    display: block;     // unknown elements rendered as inline by default
+    //@include group;
 
-    border: 3px solid;
-    border-radius: 1em;
-    background-color: $color_DiveBlack;
+    // todo: this is only for 3-column layout, need to refactor if other layouts are used
 
-    padding: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    //@media screen and (min-width: $width_Screen600) {        
+    //}
+
+    @media screen and (min-width: $width_Screen1440) {
+        width: $width_SidebarInternal;
+        max-width: $width_SidebarInternal_Max;
+        margin: 0 auto;
+    }
+    /////////////////
 }

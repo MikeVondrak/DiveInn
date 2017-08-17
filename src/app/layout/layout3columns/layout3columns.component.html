@@ -3,10 +3,14 @@
   <router-outlet></router-outlet> 
 </main>
 
-<div id="side1" class="sidebar">
+<div id="side1" class="sidebarContainer">
   <router-outlet name="sidebar1"></router-outlet>
 </div>
 
-<div id="side2" class="sidebar">
+<div id="side2" class="sidebarContainer">
   <router-outlet name="sidebar2"></router-outlet>
 </div>
+
+<!-- <div *ngIfMediaQuery="'(max-width: 500px)'">
+  min-width 500px
+</div> -->

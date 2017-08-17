@@ -1,17 +1,16 @@
 
 <section class="contentBox">
 
-  <header>
-    <!--<img src="./assets/img/plankHorizontal.png" />-->
-    <h1 *ngIf="title != ''">{{title}}</h1>
-  </header>  
+  <div class="contentBox-top">
+    <header *ngIf="title != ''">
+      <h1>{{title}}</h1>
+    </header>
+  </div>
 
-  <div class="contentBoxContent">  
+  <div class="contentBox-content">  
     <ng-content></ng-content>
   </div>
   
-  <footer>
-    <!--<img src="./assets/img/plankHorizontal.png" />-->
-  </footer>
+  <div class="contentBox-bottom"></div>
 
 </section>

@@ -2,8 +2,8 @@
 @import '../../../scss_mixins.scss';
 
 :host {
-    display: flex;              // flex for internal main content/sidebar flow
-    flex-direction: column;     // mobile-first, media queries will adapt to larger screens
+    display: block;
+    @include group;
 
     @if $debug_layout { border: 1px solid #0ff; }
 
@@ -20,108 +20,45 @@
         @media screen and (min-width: $width_Screen960) { width: 93%; }
         @media screen and (min-width: $width_Screen1024) { width: 92%; }
         @media screen and (min-width: $width_Screen1280) { width: 90%; }
-        @media screen and (min-width: $width_Screen1440) { width: inherit; margin: 0; }//flex: 5; }
+        //@media screen and (min-width: $width_Screen1440) { margin: 0; } // 2 * sidebar width
     }
 
-    .sidebar { 
-        padding: 1em;
+    .sidebarContainer { 
+        width: 100%;
+        @include group;
+
+        @media screen and (min-width: $width_Screen600) {
+            float: left;
+            width: 50%;
+            //width: 47.5%;
+            //margin-right: 2.5%;
+        }
+
         @if $debug_layout { background: $color_debug7; }
-        @media all and (min-width: $width_Screen1440) { margin-top: $height_LeftSidebarOffset; }
     }
     #side1 { 
-        //@media all and (min-width: $width_Screen1440) { margin-top: $height_LeftSidebarOffset; }
-
+        @media screen and (min-width: $width_Screen600) {
+            //margin-right: 0;
+            //margin-left: 2.5%;
+        }
         @if $debug_layout { background: $color_debug8; } 
     }
 }
 
 @media screen and (min-width: $width_Screen1440) {
     :host {
+        display: flex;          // flex for internal main content/sidebar flow
         flex-direction: row;    // begin 3-column layout
 
         main {
-            flex: 1 0 auto;     // main content flex to fill
+            flex: 1 1 auto;     // main content flex to fill
         }
-        .sidebar {
-            flex: 0 0 $width_Sidebar_3col;      // sidebars 15% width
+        .sidebarContainer {
+            margin-top: $height_LeftSidebarOffset;
+            flex: 0 0 $width_Sidebar_3col;      // sidebars' width at 3 columns
         }
         #side1 {
             order: -1;          // move first sidebar to left side
         }
     }
-}
-
-
-
-
-
-// pageContainer wraps the entire page area including header and footer
-// outermost flex context
-#pageContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-
-    //@if $debug_containers { border: 1px solid #80f; }
-
-    #columnsContainer {
-        flex: 1 0 auto;     // expand columns to fill page, ** explicit declaration for IE11 - flex: 1; shorthand will cause footer to not be sticky **
-        display: flex;      // horizontal flex for content/sidebar positioning
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        width: 100%;
-        //height: 100%;
-        //z-index: 1;
-
-        //@if $debug_containers { border: 1px solid #0ff; }
-
-        #mainContent {
-            //display: flex;  // for centering content
-            //width: 1200px;
-            flex: 1 0 auto;
-            flex-basis: 100%;
-            max-width: 100%;
-            //width: 100%;
-            //margin: 0 auto;
-            //height: 100%;
-
-            //font-size: 100%;
-            @media all and (min-width: $width_Screen480) { width: 98%; }
-            @media all and (min-width: $width_Screen640) { width: 97%; }
-            @media all and (min-width: $width_Screen800) { width: 96%; }
-            @media all and (min-width: $width_Screen960) { width: 95%; }
-            @media all and (min-width: $width_Screen1024) { width: 92%; }
-            @media all and (min-width: $width_Screen1280) { width: 90%; }
-            @media all and (min-width: $width_Screen1440) { flex: 5; }
-            @media all and (min-width: $width_Screen1680) { flex: 6; }
-            @media all and (min-width: $width_Screen1920) { flex: 7; }            
-            @media all and (min-width: $width_Screen2560) { flex: 8; }
-
-            //@if $debug_layout { background: rgba(0,0,255,0.25); }
-        }
-
-        #leftSidebar { 
-            flex: 2;
-            display: flex;  // for centering content
-
-            @media all and (min-width: $width_Screen1440) { margin-top: $height_LeftSidebarOffset; }
-
-            //@if $debug_layout { background-color: rgba(255,0,0,0.15); }
-        }
-        #rightSidebar {
-            flex: 2;
-            display: flex;  // for centering content
-
-            //@if $debug_layout { background-color: rgba(0,255,0,0.15); }
-        }
-    }
-}
-
-/* minimum screen width to begin using 3 columns side-by-side */
-@media all and (min-width: $width_Screen1440) {
-    // redefine order of elements for 3 columns
-    #leftSidebar    { order: 1; }
-    #mainContent    { order: 2; }
-    #rightSidebar   { order: 3; }
 }

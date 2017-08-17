@@ -39,6 +39,13 @@ a {
 
 /*************************************************/
 
+.biColorText {
+    text-shadow: 1px 1px 2px #444;
+  span {
+    color: $color_TextRed;
+  }
+}
+
 .diveFont { 
     float: right;
     margin-right: 2%;

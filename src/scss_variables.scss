@@ -9,13 +9,16 @@ $width_TabletLandscape: 640px;
 
 $width_Screen320: 320px;
 $width_Screen480: 480px;
+$width_Screen600: 600px;
 $width_Screen640: 640px;
 $width_Screen768: 768px;
 $width_Screen800: 800px;
 $width_Screen960: 960px;
 $width_Screen1024: 1024px;
 $width_Screen1280: 1280px;
-$width_Screen1440: 1440px;
+
+$width_Screen1440: 1340px;//1440px;
+
 $width_Screen1680: 1680px;
 $width_Screen1920: 1920px;
 $width_Screen2560: 2560px;
@@ -26,8 +29,12 @@ $height_Header: 12em;
 $height_Footer: 5em;
 //$height_LeftSidebarOffset: 6%;
 $height_LeftSidebarOffset: 8em;
+$height_contentBox-top: 1.25em;
+$height_contentBox-bottom: 1em;
 
 $width_Sidebar_3col: 15%;
+$width_SidebarInternal: 60%;
+$width_SidebarInternal_Max: 220px;
 
 /*******************************************/
 
