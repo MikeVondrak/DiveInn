@@ -69,7 +69,7 @@ footer {
         margin: 0 10% 2em 0;
         header {
             h1 {
-                @include biColorHeader;
+                @include biColorText;
                 margin-bottom: 0;
             }
         }

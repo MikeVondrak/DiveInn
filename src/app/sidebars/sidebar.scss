@@ -3,12 +3,7 @@
 
 // target the host element ("app-sidebar-left", "app-sidebar-right", etc)
 :host { 
-
-    display: block;     // unknown elements rendered as inline by default
-    //@include group;
-
     // todo: this is only for 3-column layout, need to refactor if other layouts are used
-
 
     display: flex;
     flex-direction: row;

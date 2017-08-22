@@ -1,3 +1,4 @@
+// http://blog.radiant3.ca/2016/11/21/angular2-directive-responsive-conditional-output-using-css-media-query/
 // https://gist.github.com/davidmarquis/80e6d1ada3a024022f985a587b587825
 
 import { Directive, TemplateRef, ViewContainerRef } from "@angular/core";

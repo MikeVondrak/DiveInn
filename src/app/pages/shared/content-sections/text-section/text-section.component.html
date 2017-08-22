@@ -1,0 +1,24 @@
+<!-- <h1 class='splitTitle' *ngIf="splitTitle != ''">{{splitTitle}}</h1>
+<h1 *ngIf="sectionTitle != ''">{{sectionTitle}}</h1>
+<h2 *ngIf="subTitle != ''">{{subTitle}}</h1> -->
+
+<!-- <ng-content select="split-title"></ng-content>
+<ng-content select="section-title"></ng-content>
+<ng-content select="sub-title"></ng-content> -->
+
+<ng-content select=".splitTitle"></ng-content>
+<ng-content select=".sectionTitle"></ng-content>
+<ng-content select=".subTitle"></ng-content>
+
+<!-- <h1 class="splitTitle">
+    <ng-content select="split-title"></ng-content>
+</h1>
+<h1>
+    <ng-content select="section-title"></ng-content>
+</h1>
+<h2>
+    <ng-content select="sub-title"></ng-content>
+</h2> -->
+
+<ng-content></ng-content>
+

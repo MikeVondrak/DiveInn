@@ -1,13 +1,15 @@
 
 <section class="contentBox">
 
+  <div class="pageAnchor" [id]="scrollId"></div>
+  
   <div class="contentBox-top">
     <header *ngIf="title != ''">
       <h1>{{title}}</h1>
     </header>
   </div>
 
-  <div class="contentBox-content">  
+  <div [ngClass]="{'contentBox-content': true, 'contentBox-content-titled': title != ''}">  
     <ng-content></ng-content>
   </div>
   

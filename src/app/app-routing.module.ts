@@ -1,5 +1,6 @@
-import { NgModule }       from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule, AfterViewChecked, OnDestroy }       from '@angular/core';
+import { RouterModule, Router, Routes, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs/Rx';
 
 import { Layout1columnComponent } from './layout/layout1column/layout1column.component';
 import { Layout3columnsComponent } from './layout/layout3columns/layout3columns.component';
@@ -47,7 +48,31 @@ const routes: Routes = [
     exports: [RouterModule],
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule implements AfterViewChecked, OnDestroy {
+    
+    // fix in-page anchor links scroll to element in doc
+    private subscription: Subscription;
+    constructor(router:Router) {
+        this.subscription = router.events.subscribe(s => {
+            console.log("Router event: " + s.toString);
+            if (s instanceof NavigationEnd) {
+                const tree = router.parseUrl(router.url);
+                if (tree.fragment) {
+                    const element = document.querySelector("#" + tree.fragment);
+                    if (element) { 
+                        element.scrollIntoView();
+                    }
+                }
+            }
+            });
+    }
+    public ngAfterViewChecked() {
+        
+    }
+    public ngOnDestroy() {
+        this.subscription.unsubscribe();
+    }
+}
 export const routingComponents = [HomeComponent, DiveLogComponent, WhatsInsideComponent];
 export const navRoutes = [
                 { display: "Home", routeStr: "Home" },

@@ -1,0 +1,52 @@
+@import '../../../../../scss_variables.scss';
+
+:host {
+
+    > div {
+
+    display: flex;
+    //flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.orderReverse { flex-wrap: wrap-reverse; }
+
+    //margin-bottom: 2em;
+    //border: 1px solid red;
+
+    //&:first-child { margin-top: 1em; }
+    &:last-child {
+        > div:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (min-width: $width_Screen600) { 
+        flex-direction: row; 
+    }
+    //@media screen and (min-width: $width_Screen600) {}
+    //@media screen and (min-width: $width_Screen600) {}
+
+
+    > div {
+        flex: 1 0 100%;
+        min-height: 1px;    // IE11 fix for resized img within nested flex container causing whitespace equal to original image height
+        margin-bottom: 2em;
+        //&:last-child { margin-bottom: 0; }
+
+        @media screen and (min-width: $width_Screen600) { 
+            flex: 0 1 48%;
+        }
+        //border: 1px solid red;
+
+        // todo: temp - move to using imageComponent
+        /deep/ img {
+            width: 100%;
+            border-radius: 0.5em;
+            height: 100%;
+        }
+    }
+
+    }
+}
+

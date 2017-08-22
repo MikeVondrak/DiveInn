@@ -30,9 +30,13 @@ import { DiveLogComponent }           from './pages/dive-log/dive-log.component'
 import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.component';
 import { ContentBoxComponent }        from './pages/shared/content-box/content-box.component';
 import { CalloutComponent }           from './sidebars/callout/callout.component';
-import { ContentLayoutComponent }     from './pages/shared/content-layout/content-layout.component';
+import { ContentLayout2ColComponent }     from './pages/shared/content-layouts/content-layout-2col/content-layout-2col.component';
 
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NotFoundComponent }          from './pages/not-found/not-found.component';
+
+// todo: remove?
+import { TextSectionComponent }       from './pages/shared/content-sections/text-section/text-section.component';
+import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.component';
 
 @NgModule({
   imports: [
@@ -55,9 +59,11 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     SiteFooterComponent,
     ContentBoxComponent,
     CalloutComponent,
-    ContentLayoutComponent,
+    ContentLayout2ColComponent,
     NotFoundComponent,
-    NgIfMediaQuery
+    NgIfMediaQuery,
+    TextSectionComponent,
+    InPageNavComponent
   ],
   providers: [NgIfMediaQuery],
   bootstrap: [AppComponent]

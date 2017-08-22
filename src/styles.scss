@@ -13,11 +13,22 @@ body {
     background-color: $color_BodyBg;
     font-size: 100%;
     font-family: 'Ubuntu Condensed', sans-serif;
+    @media screen and (min-width: $width_Screen640) { font-size: 110%; }
+    @media screen and (min-width: $width_Screen768) { font-size: 110%; }
+    @media screen and (min-width: $width_Screen800) { font-size: 115%; }
+    @media screen and (min-width: $width_Screen960) { font-size: 120%; }
+    @media screen and (min-width: $width_Screen1024) { font-size: 120%; }
+    @media screen and (min-width: $width_Screen1280) { font-size: 130%; }
+    @media screen and (min-width: $width_Screen1440) { font-size: 120%; }
+    @media screen and (min-width: $width_Screen1680) { font-size: 130%; }
+    @media screen and (min-width: $width_Screen1920) { font-size: 150%; }
+    @media screen and (min-width: $width_Screen2560) { font-size: 200%; }
 }
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    margin: 0 0 0.5em 0;
+    margin: 0.4em 0 0.3em 0;
     letter-spacing: 0.3px;
+    &:first-child { margin-top: 0; }
 }
 p { margin: 0 0 0.5em 0; letter-spacing: -1px; }
 

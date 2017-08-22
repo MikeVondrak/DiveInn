@@ -1,0 +1,20 @@
+@import "../../../../../scss_mixins";
+@import "../../../../../scss_variables";
+
+/deep/ {
+    .splitTitle {
+        font-size: 3em;
+        margin-bottom: 0em;
+        @include biColorText;
+    }
+
+    .sectionTitle { }
+
+    .subTitle { 
+        //margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 1.5em;
+    }
+}

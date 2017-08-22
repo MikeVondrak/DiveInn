@@ -58,16 +58,16 @@ nav {
                 background-size: 100% 100%;
                 //font-size: 1.5em;
                 font-size: 0.9em;
-                @media screen and (min-width: $width_Screen480) { font-size: 1em; }
-                @media screen and (min-width: $width_Screen640) { font-size: 1.1em; }
-                @media screen and (min-width: $width_Screen800) { font-size: 1.2em; }
-                @media screen and (min-width: $width_Screen960) { font-size: 1.3em; }
-                @media screen and (min-width: $width_Screen1024) { font-size: 1.5em; }
-                @media screen and (min-width: $width_Screen1280) { font-size: 1.6em; }
-                @media screen and (min-width: $width_Screen1440) { font-size: 1.3em; }
-                @media screen and (min-width: $width_Screen1680) { font-size: 1.5em; }
-                @media screen and (min-width: $width_Screen1920) { font-size: 1.6em; }
-                @media screen and (min-width: $width_Screen2560) { font-size: 1.8em; }
+                @media screen and (min-width: $width_Screen480) { font-size: 0.8em; }
+                @media screen and (min-width: $width_Screen640) { font-size: 0.9em; }
+                @media screen and (min-width: $width_Screen800) { font-size: 1.0em; }
+                @media screen and (min-width: $width_Screen960) { font-size: 1.1em; }
+                @media screen and (min-width: $width_Screen1024) { font-size: 1.3em; }
+                @media screen and (min-width: $width_Screen1280) { font-size: 1.4em; }
+                @media screen and (min-width: $width_Screen1440) { font-size: 1.1em; }
+                @media screen and (min-width: $width_Screen1680) { font-size: 1.3em; }
+                @media screen and (min-width: $width_Screen1920) { font-size: 1.4em; }
+                @media screen and (min-width: $width_Screen2560) { font-size: 1.6em; }
                 font-weight: bold;
                 text-shadow: -1px -1px 2px $color_DiveGrey, -1px -1px 1px $color_DiveBlack;//, 0px 0px 0px #555;
                 letter-spacing: 1px;

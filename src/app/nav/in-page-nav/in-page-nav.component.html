@@ -1,0 +1,7 @@
+<nav>
+  <ul>
+    <!-- todo: why does a void click fix the page scrolling to element?? -->
+    <!-- <li *ngFor="let r of routeFragmentTextPairs"><a [routerLink]="[]" [fragment]="r.fragment" (click)="void();">{{r.display}}</a></li> -->
+    <li *ngFor="let r of routeFragmentTextPairs"><a [routerLink]="[]" [fragment]="r.fragment" (click)="scrollToElementWithId(r.fragment)">{{r.display}}</a></li>
+  </ul>
+</nav>

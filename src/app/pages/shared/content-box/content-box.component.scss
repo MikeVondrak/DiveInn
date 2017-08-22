@@ -7,7 +7,13 @@
 }
 
 .contentBox {
-    
+    position: relative;
+
+    .pageAnchor {
+        position: absolute;
+        top: -2em;
+    }
+
     .contentBox-top, .contentBox-bottom {
         height: $height_contentBox-bottom;
         background: url('../../../../assets/img/plankHorizontal.png');
@@ -25,13 +31,14 @@
             left: 50%;
             transform: translate(-50%,-50%);
             margin-top: $height_contentBox-top/2;      // half of contentBox-top height
-            padding: 0.5em 1em;
+            padding: 0.5em 1em 0.3em 1em;
             background: url('../../../../assets/img/contentTitle.png');
             border-radius: 0.25em;
             box-shadow: 2px 2px 6px 0px hsla(0,0%,0%,1);
 
             h1 {
                 margin: 0;
+                //font-size: 1.75em;
                 text-shadow: -1px -1px #333;
             }
         }
@@ -45,6 +52,8 @@
         border: 1px solid #777;
         border-top: none;
         border-bottom: none;
+
+        &.contentBox-content-titled { padding-top: 2em; }
     }
 
 }

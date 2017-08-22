@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    // called after the constructor and called after the first ngOnChanges() 
+    // called after the constructor and called once after the first ngOnChanges() 
   }
 
   ngAfterViewInit() {
