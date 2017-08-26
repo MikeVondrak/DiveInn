@@ -1,14 +1,21 @@
-<!-- <h1 class='splitTitle' *ngIf="splitTitle != ''">{{splitTitle}}</h1>
-<h1 *ngIf="sectionTitle != ''">{{sectionTitle}}</h1>
-<h2 *ngIf="subTitle != ''">{{subTitle}}</h1> -->
-
-<!-- <ng-content select="split-title"></ng-content>
-<ng-content select="section-title"></ng-content>
-<ng-content select="sub-title"></ng-content> -->
+<!-- <div *ngIf='split.children.length > 0'>SPLIT TITLE SHOWN</div>
+<h1 #split class="splitTitle"><ng-content select="[split-title]"></ng-content></h1>
+<h1 *ngIf='[section-title]' class="sectionTitle"><ng-content select="[section-title]"></ng-content></h1>
+<h2 *ngIf='[sub-title]' class="subTitle"><ng-content select="[sub-title]"></ng-content></h2> -->
 
 <ng-content select=".splitTitle"></ng-content>
 <ng-content select=".sectionTitle"></ng-content>
 <ng-content select=".subTitle"></ng-content>
+
+<div>
+    <ng-content></ng-content>
+</div>
+
+
+<!-- <h1 class='splitTitle' *ngIf="splitTitle != ''">{{splitTitle}}</h1>
+<h1 *ngIf="sectionTitle != ''">{{sectionTitle}}</h1>
+<h2 *ngIf="subTitle != ''">{{subTitle}}</h1> -->
+
 
 <!-- <h1 class="splitTitle">
     <ng-content select="split-title"></ng-content>
@@ -19,6 +26,3 @@
 <h2>
     <ng-content select="sub-title"></ng-content>
 </h2> -->
-
-<ng-content></ng-content>
-

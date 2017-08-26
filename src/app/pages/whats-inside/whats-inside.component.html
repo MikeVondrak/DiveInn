@@ -6,6 +6,7 @@
       <app-text-section>
           <!-- <ng-container split-title>INSIDE THE <span>DIVE INN</span></ng-container>
           <ng-container sub-title>Dive Bar &#8226; Sports Bar &#8226; Games Bar</ng-container> -->
+
           <h1 class="splitTitle">INSIDE THE <span>DIVE INN</span></h1>
           <h2 class="subTitle">Dive Bar &#8226; Sports Bar &#8226; Games Bar</h2>
           
@@ -17,15 +18,14 @@
             there's always a reason to visit the Dive Inn.</p>
           <p><strong>Open 365 days a year</strong>, we're ready whenever you are!</p>
           
-          <h3>Check out what the Dive Inn has to offer:</h3>
-          <!-- fragment needs to match scrollId of app-content-box -->
+          <h3>Check out what the Dive Inn has to offer:</h3>          
           <app-in-page-nav [routeFragmentTextPairs]="[{display: 'The Bar', fragment: 'TheBar'},
                                                       {display: 'Events', fragment: 'Events'},
                                                       {display: 'Games', fragment: 'Games'},
                                                       {display: 'Food', fragment: 'Food'},
                                                       {display: 'Charters', fragment: 'Charters'},
                                                       {display: 'Extras', fragment: 'Extras'}]">
-          </app-in-page-nav>
+          </app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
       </app-text-section>
     </div>
 
@@ -40,49 +40,55 @@
 <app-content-box title="The Bar" scrollId="TheBar">
   <app-content-layout-2col flowReverse="true">
     <div left>
-      <img src="./assets/img/Dive-Inn-Exterior.jpg" alt="Dive Inn Exterior at Night" title="Dive Inn Exterior - Night"/>
+      <app-text-section>
+        <h2 class='biColorText'>HUGE <span>SPACE</span></h2>                
+        <p>6300 square feet of adult playground means there's always plenty of space for you and all your friends.</p>
+        
+        <h2 class='biColorText'><span>THREE</span> ROOMS</h2>
+        <p>
+            The large front room houses the main bar and a seating area with a wall of TVs, not to mention a <a href="#charters">18' speedboat</a> you can Wii fish from,
+            and two different <a href="#games">game rooms</a> in back offer pool, foosball, and FREE cornhole and table tennis.
+        </p>             
+        <h2 class='biColorText'>THREE <span>PATIOS</span></h2>
+        <p>A giant interior patio space hosts table tennis and cornhole games, while two satellite patios provide plenty of seating to enjoy the great Colorado weather.</p>
+      </app-text-section>
     </div>
     <div right>
-      <h2 class='biColorText'>HUGE <span>SPACE</span></h2>                
-      <p>6300 square feet of adult playground means there's always plenty of space for you and all your friends.</p>
-      
-      <h2 class='biColorText'><span>THREE</span> ROOMS</h2>
-      <p>
-          The large front room houses the main bar and a seating area with a wall of TVs, not to mention a <a href="#charters">18' speedboat</a> you can Wii fish from,
-          and two different <a href="#games">game rooms</a> in back offer pool, foosball, and FREE cornhole and table tennis.
-      </p>             
-      <h2 class='biColorText'>THREE <span>PATIOS</span></h2>
-      <p>A giant interior patio space hosts table tennis and cornhole games, while two satellite patios provide plenty of seating to enjoy the great Colorado weather.</p>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
 
   <app-content-layout-2col>
     <div left>
-      <h2 class='biColorText'>WIDE OPEN</h2>
-      <p>How best to compliment a giant bar with 3 rooms and 3 patios? How about 5 garage doors, one opening to each patio, making Dive Inn the perfect summer spot.</p>
-      <h2>13 WIDESCREENS</h2>
-      <p>Whatever sporting event you want to catch you can be sure it will be playing on one of the Dive Inn's 13 high definition flatscreens, with 
-        <a href="http://www.directv.com/sports/mlb_schedules" target="_blank">MLB</a>, 
-        <a href="http://www.directv.com/sports/nhl" target="_blank">NHL</a>, 
-        and <a href="http://www.directv.com/sports/nfl" target="_blank">NFL</a> DIRECTV sports packages showing games from across the country.</p>
-      <h2>THREE BARS</h2>
-      <p>One main bar keeps the crowd properly lubricated, and two additional bars can open up for when things get truely crazy.</p>
+      <app-text-section>
+        <h2 class='biColorText'>WIDE OPEN</h2>
+        <p>How best to compliment a giant bar with 3 rooms and 3 patios? How about 5 garage doors, one opening to each patio, making Dive Inn the perfect summer spot.</p>
+        <h2 class='biColorText'>13 WIDESCREENS</h2>
+        <p>Whatever sporting event you want to catch you can be sure it will be playing on one of the Dive Inn's 13 high definition flatscreens, with 
+          <a href="http://www.directv.com/sports/mlb_schedules" target="_blank">MLB</a>, 
+          <a href="http://www.directv.com/sports/nhl" target="_blank">NHL</a>, 
+          and <a href="http://www.directv.com/sports/nfl" target="_blank">NFL</a> DIRECTV sports packages showing games from across the country.</p>
+        <h2 class='biColorText'>THREE BARS</h2>
+        <p>One main bar keeps the crowd properly lubricated, and two additional bars can open up for when things get truely crazy.</p>
+      </app-text-section>
     </div>
     <div right>
-      <img src="./assets/img/Dive-Inn-Exterior.jpg" alt="Dive Inn Exterior at Night" title="Dive Inn Exterior - Night"/>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
 
   <app-content-layout-2col flowReverse="true">
     <div left>
-      <img src="./assets/img/Dive-Inn-Exterior.jpg" alt="Dive Inn Exterior at Night" title="Dive Inn Exterior - Night"/>
+      <app-text-section>
+        <h2>PRIVATE PARTIES</h2>
+        <p>Charter your own 18' <a href="#charters">party boat</a> for a group of up to 13, or reserve a 
+          <a href="#charters">whole room, patio, or bar</a> and even your own private tap!</p>
+        <h2>DIVE INN GALLEY</h2>
+        <p>Serving up authentic Mexican favorites from our own in-house taqueria, the <a href="#food">Dive Inn Galley</a> has something for every appetite.</p>
+      </app-text-section>
     </div>
     <div right>
-      <h2 class='biColorText'>PRIVATE PARTIES</h2>
-      <p>Charter your own 18' <a href="#charters">party boat</a> for a group of up to 13, or reserve a 
-        <a href="#charters">whole room, patio, or bar</a> and even your own private tap!</p>
-      <h2>DIVE INN GALLEY</h2>
-      <p>Serving up authentic Mexican favorites from our own in-house taqueria, the <a href="#food">Dive Inn Galley</a> has something for every appetite.</p>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
 </app-content-box>
@@ -90,32 +96,36 @@
 <app-content-box title="Events" scrollId="Events">  
   <app-content-layout-2col>
     <div left>
-      <!-- todo: images for events, different layout if text? -->
-      <h2>HABITUAL RELAPSE</h2>
-      <p>Occurring weekly and seasonally, these special events offer a great variety of ways to enjoy a different side of Dive Inn...
-      <h3>Detox to Retox</h3>
-      <p>Come practice your Downward Dog and enjoy a bit of the hair of it, too. Yoga class and bottomless mimosas on Saturday mornings.</p>
-      <h3>Itsy Bitsy Teeny Weeny All You Can Drink...</h3>
-      <p>Ladies, don you tanning attire and enjoy free drinks on the patio sun lounge, Saturdays during summer.</p>
-      <h3>Sunday Funday</h3>
-      <p>Donate to a great cause and get a free t-shirt and drink specials, every Sunday.</p>
-      <h3>Crawfish Boil</h3>
-      <p>Get your fill of real Cajun cuisine, held throughout the summer.</p>
+      <app-text-section>
+        <!-- todo: images for events, different layout if text? -->
+        <h2>HABITUAL RELAPSE</h2>
+        <p>Occurring weekly and seasonally, these special events offer a great variety of ways to enjoy a different side of Dive Inn...</p>
+        <h3>Detox to Retox</h3>
+        <p>Come practice your Downward Dog and enjoy a bit of the hair of it, too. Yoga class and bottomless mimosas on Saturday mornings.</p>
+        <h3>Itsy Bitsy Teeny Weeny All You Can Drink...</h3>
+        <p>Ladies, don you tanning attire and enjoy free drinks on the patio sun lounge, Saturdays during summer.</p>
+        <h3>Sunday Funday</h3>
+        <p>Donate to a great cause and get a free t-shirt and drink specials, every Sunday.</p>
+        <h3>Crawfish Boil</h3>
+        <p>Get your fill of real Cajun cuisine, held throughout the summer.</p>
+      </app-text-section>
     </div>
     <div right>
-      <h1>Right Content</h1>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
 
-  <app-content-layout-2col>
+  <app-content-layout-2col flowReverse="true">
     <div left>
-      <h1>Left Content</h1>
+      <app-text-section>
+        <h2>EVENTS CALENDAR</h2>
+        <p>At Dive Inn we've got a lot more going on than your average bar! 
+          With recurring events every week and a ton of one-off and seasonal parties, you'll always find something exciting happening at the Dive Inn.</p>
+        <p>Check out the <a [routerLink]="['/DiveLog']">Dive Log Events Calendar</a> to see what's coming up next:</p>
+      </app-text-section>
     </div>
     <div right>
-      <h2>EVENTS CALENDAR</h2>
-      <p>At Dive Inn we've got a lot more going on than your average bar! 
-        With recurring events every week and a ton of one-off and seasonal parties, you'll always find something exciting happening at the Dive Inn.</p>
-      <p>Check out the <a [routerLink]="['/DiveLog']">Dive Log Events Calendar</a> to see what's coming up next:</p>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
 
@@ -124,48 +134,131 @@
 <app-content-box title="Games" scrollId="Games">  
   <app-content-layout-2col>
     <div left>
-      <h1>Left Content</h1>
+      <app-text-section>
+        <h2>POOL</h2>
+        <p>Two 7' tables with plenty of players to fill them, pick up a game or check out league information if you're interested in joining a team.</p>
+        <h2>FOOSBALL</h2>
+        <p>Two Tornado Platinum Tour Edition tournament style tables offer some of the finest foosing in Denver.</p>
+        <h2>TABLE TENNIS</h2>
+        <p>Play for FREE, and claim your time at the bar is really training for the Olympics. Two regulation tables to play on indoors or outdoors seasonally.</p>
+      </app-text-section>
     </div>
     <div right>
-      <h2>POOL</h2>
-      <p>Two 7' tables with plenty of players to fill them, pick up a game or check out league information if you're interested in joining a team.</p>
-      <h2>FOOSBALL</h2>
-      <p>Two Tornado Platinum Tour Edition tournament style tables offer some of the finest foosing in Denver.</p>
-      <h2>TABLE TENNIS</h2>
-      <p>Play for FREE, and claim your time at the bar is really training for the Olympics. Two regulation tables to play on indoors or outdoors seasonally.</p>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
+
+  <app-content-layout-2col  flowReverse="true">
+    <div left>
+      <app-text-section>
+        <h2>CORNHOLE</h2>
+        <p>AKA "bean bag toss", enjoy a favorite outdoor pastime for FREE with two sets of boards and bags to play on the patio.</p>
+        <h2>KARAOKE</h2>
+        <p>Belt one out while you belt one down, a brand new TouchTunes jukebox with built-in karaoke lets you embrace your inner diva.</p>
+        <h2>VIDEO GAMES</h2>
+        <p>Play a virtual round on Golden Tee Golf, or kick back in the boat with your crew for a placid day of Wii Bass Pro fishing.</p>
+      </app-text-section>
+    </div>
+    <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+    </div>
+  </app-content-layout-2col>
+
+  <app-content-layout-2col>
+      <div left>
+        <app-text-section>
+          <h2>GET COMPETETIVE</h2>
+          <p>Dive Inn hosts a variety of friendly competitions, from one-off tournaments to weekly leagues, and we're available for any event you want to organize.</p>
+          <a href="#">Dive Competitions</a>
+        </app-text-section>
+      </div>
+      <div right>
+          <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+    </app-content-layout-2col>
+    
 </app-content-box>
 
 <app-content-box title="Food" scrollId="Food">  
-  <app-content-layout-2col>
+  <app-content-layout-2col  flowReverse="true">
     <div left>
-      <h1>Left Content</h1>
+        <app-text-section>
+            <h2 class="biColorText"><span>CLUCK</span> CHICKEN AT <span>DIVE</span> INN</h2>
+            <p>NEED COPY</p>
+            <p>Hours open??</p>
+            <p><a href="#">See the Menu</a></p>
+            <p><a href="https://www.facebook.com/theclucktruck/" target="_blank">Cluck Chicken on Facebook</a></p>
+          </app-text-section>
     </div>
     <div right>
-      <h1>Right Content</h1>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
-  </app-content-layout-2col>
+  </app-content-layout-2col>  
 </app-content-box>
 
 <app-content-box title="Charters" scrollId="Charters">  
   <app-content-layout-2col>
     <div left>
-      <h1>Left Content</h1>
+        <app-text-section>
+            <h2 class="biColorText">PARTY <span>BOAT</span></h2>
+            <p>Charter the 18' fiberglass speedboat for a full or half day and bring along up to 12 of your best mates, 
+              with your own private seating and Wii Bass Pro fishing.</p>
+            <p><a href="#">Charter the Party Boat</a></p>
+            <p>Join the <a href="#">P.A.D.I. Club</a> and get a $25 bar tab and one free hour in the boat on your birthday!</p>
+        </app-text-section>
     </div>
     <div right>
-      <h1>Right Content</h1>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
+  <app-content-layout-2col flowReverse="true">
+      <div left>
+          <app-text-section>
+              <h2 class="biColorText"><span>RESERVE</span> ROOMS</h2>
+              <p>Need space for a larger event? You can reserve rooms, patios and bars for birthdays, charity functions, business gatherings or any celebration!</p>
+              <p>Book the main bar, game room, tennis table room (with your own private tap), and/or any of the patios to create the perfect space for any occassion.</p>
+              <p><a href="#">Reserve a Space</a></p>              
+          </app-text-section>
+      </div>
+      <div right>
+          <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+    </app-content-layout-2col>
 </app-content-box>
 
 <app-content-box title="Extras" scrollId="Extras">
   <app-content-layout-2col>
     <div left>
-      <h1>Left Content</h1>
+        <app-text-section>
+            <h2 class="biColorText">P.A.D.I. <span>CLUB</span></h2>
+            <p>Get exclusive deals and specials and be first to know about upcoming Dive Inn events by becoming a <a href="#">P.A.D.I. Club</a> member.</p>
+            <p><a href="#">Join the P.A.D.I. Club</a></p>
+            <h2 class="biColorText">DIVE <span>SHOP</span></h2>
+            <p>From hats to hoodies, check out the <a href="#">Dive Shop</a> for classy additions to your wardrobe.</p>
+            <p><a href="#">Visit the Dive Shop</a></p>
+        </app-text-section>
     </div>
     <div right>
-      <h1>Right Content</h1>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
+  <app-content-layout-2col flowReverse="true">
+      <div left>
+          <app-text-section>
+              <h2>PARKING</h2>
+              <p>10 off-street spaces and ample street parking all along the Broadway corridor</p>
+              <h2>WIFI</h2>
+              <p>Wireless internet for your computing convenience</p>
+              <h2>POWER</h2>
+              <p>Outlets for every seat around the bar to keep you powered in this age of technology</p>
+              <h2>CHARGERS</h2>
+              <p>Every popular type of charging cable in case your device gets low on juice</p>
+              <h2>CASH</h2>
+              <p>An ATM and quarter machine next to the front door for any type of currency need</p>
+          </app-text-section>
+      </div>
+      <div right>
+          <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+    </app-content-layout-2col>
 </app-content-box>

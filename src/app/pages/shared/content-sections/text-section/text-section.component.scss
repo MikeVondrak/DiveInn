@@ -1,7 +1,29 @@
 @import "../../../../../scss_mixins";
 @import "../../../../../scss_variables";
 
-/deep/ {
+// :host {
+//     .splitTitle {
+//         font-size: 3em;
+//         margin-bottom: 0em;
+//         @include biColorText;
+//     }
+
+//     .sectionTitle { }
+
+//     .subTitle { 
+//         margin-top: 0;
+//     }
+    
+//     > div {
+//         /deep/ p {
+//             margin-bottom: 1.5em;
+//             &:last-child { margin-bottom: 0; }
+//         }
+//     }
+// }
+
+// :host /deep/ cascades to only childred of :host rather than globally w/ just /deep/
+:host /deep/ {
     .splitTitle {
         font-size: 3em;
         margin-bottom: 0em;
@@ -11,10 +33,11 @@
     .sectionTitle { }
 
     .subTitle { 
-        //margin-top: 0;
+        margin-top: 0;
     }
 
     p {
         margin-bottom: 1.5em;
-    }
+        &:last-child { margin-bottom: 0; }
+    }    
 }

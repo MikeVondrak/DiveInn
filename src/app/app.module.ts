@@ -37,6 +37,7 @@ import { NotFoundComponent }          from './pages/not-found/not-found.componen
 // todo: remove?
 import { TextSectionComponent }       from './pages/shared/content-sections/text-section/text-section.component';
 import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.component';
+import { ImageSectionComponent } from './pages/shared/content-sections/image-section/image-section.component';
 
 @NgModule({
   imports: [
@@ -63,7 +64,8 @@ import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.compon
     NotFoundComponent,
     NgIfMediaQuery,
     TextSectionComponent,
-    InPageNavComponent
+    InPageNavComponent,
+    ImageSectionComponent
   ],
   providers: [NgIfMediaQuery],
   bootstrap: [AppComponent]

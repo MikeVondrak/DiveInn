@@ -9,7 +9,7 @@
 
 @mixin biColorText {
   text-shadow: 1px 1px 2px #444;
-  span {
+  /deep/ span {
     color: $color_TextRed;
   }
 }
