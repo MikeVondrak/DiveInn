@@ -1,12 +1,31 @@
-<nav>
+<nav *ngIfMediaQuery="'(min-width: 600px)'"><!-- todo: change this from hardcoded value -->
+  <ul class="signPosts">
+    <li *ngFor="let nr1 of _navRoutes">
+    </li>
+  </ul>
+  <ul class="signs">
+      <li *ngFor="let nr2 of _navRoutes">
+          <a [routerLink]="'../' + nr2.routeStr">{{nr2.display}}</a>
+      </li>
+    </ul>
+</nav>
+<!-- <nav *ngIfMediaQuery="'(max-width: 599px)'"> -->
+<!-- <nav>
   <ul>
-    <li>
+      <li *ngFor="let nr3 of _navRoutes">{{nr3.routeStr}}</li>
+  </ul>
+</nav> -->
+
+
+<!-- <nav>
+  <ul>
+    <li style="z-index: 100">
       <a [routerLink]="['/Home']">Home</a>
     </li>
-    <li>
+    <li style="z-index: 90">
       <a [routerLink]="['/DiveLog']">Dive Log</a>
     </li>
-    <li>
+    <li style="z-index: 80">
       <a [routerLink]="['/WhatsInside']">What's Inside</a>
     </li>
     <li>
@@ -37,4 +56,4 @@
       <a href="#">Find Us</a>
     </li>
   </ul>
-</nav>
+</nav> -->

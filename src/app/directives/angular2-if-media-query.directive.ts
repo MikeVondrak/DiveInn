@@ -1,7 +1,7 @@
 // http://blog.radiant3.ca/2016/11/21/angular2-directive-responsive-conditional-output-using-css-media-query/
 // https://gist.github.com/davidmarquis/80e6d1ada3a024022f985a587b587825
 
-import { Directive, TemplateRef, ViewContainerRef } from "@angular/core";
+import { Directive, TemplateRef, ViewContainerRef, ChangeDetectorRef } from "@angular/core";
 //import { isBlank } from "@angular/core/src/facade/lang";
 
 
@@ -23,8 +23,11 @@ export class NgIfMediaQuery {
 
   private mql: MediaQueryList;
   private mqlListener: (mql: MediaQueryList) => void;   // reference kept for cleaning up in ngOnDestroy()
+  private changeDetRef: ChangeDetectorRef;
 
-  constructor(private viewContainer: ViewContainerRef, private templateRef: TemplateRef<Object>) {}
+  constructor(private viewContainer: ViewContainerRef, private templateRef: TemplateRef<Object>, private changeDetectionRef: ChangeDetectorRef) {
+    this.changeDetRef = changeDetectionRef;
+  }
 
   /**
    * Called whenever the media query input value changes.
@@ -49,13 +52,18 @@ export class NgIfMediaQuery {
   }
 
   private onMediaMatchChange(matches: boolean) {
-    // this has been taken verbatim from NgIf implementation
-    if (matches && (this.isBlank(this.prevCondition))) { // || !this.prevCondition)) {
+    
+    console.log("onMediaMatchChange: " + matches);
+    
+    // check if media query condition met and was previously false or is not met and previously true
+    if (matches && (this.isBlank(this.prevCondition))) {
       this.prevCondition = true;
-      this.viewContainer.createEmbeddedView(this.templateRef);
-    } else if (!matches && (!this.isBlank(this.prevCondition))) { // || this.prevCondition)) {
+      this.viewContainer.createEmbeddedView(this.templateRef);    // add ngIfMediaQuery element to dom
+      this.changeDetRef.detectChanges();                          // manually detect changes in case of non-angular (e.g. window resize) events to repopulate date in template
+      
+    } else if (!matches && (!this.isBlank(this.prevCondition))) {
       this.prevCondition = false;
-      this.viewContainer.clear();
+      this.viewContainer.clear();   // remove ngIfMediaQuery element from the dom
     }
   }
   private isBlank(x: boolean) {

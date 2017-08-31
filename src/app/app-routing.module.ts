@@ -74,8 +74,22 @@ export class AppRoutingModule implements AfterViewChecked, OnDestroy {
     }
 }
 export const routingComponents = [HomeComponent, DiveLogComponent, WhatsInsideComponent];
-export const navRoutes = [
+export type navRoute = Array<{display: string, routeStr: string}>;
+export const navRoutes: navRoute = [
                 { display: "Home", routeStr: "Home" },
                 { display: "Dive Log", routeStr: "DiveLog" },
-                { display: "What's Inside", routeStr: "WhatsInside" }
+                { display: "What's Inside", routeStr: "WhatsInside" },
+                { display: "Specials", routeStr: "WhatsInside" },
+                { display: "Galley", routeStr: "WhatsInside" },
+                //{ display: "Food", routeStr: "WhatsInside" },
+                { display: "P.A.D.I. Club", routeStr: "WhatsInside" },
+                { display: "Gallery", routeStr: "WhatsInside" },
+                //{ display: "Photos", routeStr: "WhatsInside" },
+                { display: "Dive Shop", routeStr: "WhatsInside" },
+                { display: "Dive Buddy", routeStr: "WhatsInside" },
+                //{ display: "Mobile App", routeStr: "WhatsInside" },
+                { display: "Dive News", routeStr: "WhatsInside" },
+                { display: "Charters", routeStr: "WhatsInside" },
+                //{ display: "Reservations", routeStr: "WhatsInside" },
+                { display: "Find Us", routeStr: "WhatsInside" }
             ];
