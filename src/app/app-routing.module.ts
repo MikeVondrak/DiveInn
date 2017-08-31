@@ -2,14 +2,26 @@ import { NgModule, AfterViewChecked, OnDestroy }       from '@angular/core';
 import { RouterModule, Router, Routes, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 
-import { Layout1columnComponent } from './layout/layout1column/layout1column.component';
-import { Layout3columnsComponent } from './layout/layout3columns/layout3columns.component';
-import { SidebarLeftComponent } from './sidebars/sidebar-left/sidebar-left.component';
-import { SidebarRightComponent } from './sidebars/sidebar-right/sidebar-right.component';
-import { NavMainComponent } from './nav/nav-main/nav-main.component'
-import { HomeComponent } from './pages/home/home.component';
-import { DiveLogComponent } from './pages/dive-log/dive-log.component';
-import { WhatsInsideComponent } from './pages/whats-inside/whats-inside.component';
+import { Layout1columnComponent }   from './layout/layout1column/layout1column.component';
+import { Layout3columnsComponent }  from './layout/layout3columns/layout3columns.component';
+import { SidebarLeftComponent }     from './sidebars/sidebar-left/sidebar-left.component';
+import { SidebarRightComponent }    from './sidebars/sidebar-right/sidebar-right.component';
+import { NavMainComponent }         from './nav/nav-main/nav-main.component'
+
+import { HomeComponent }            from './pages/home/home.component';
+import { DiveLogComponent }         from './pages/dive-log/dive-log.component';
+import { WhatsInsideComponent }     from './pages/whats-inside/whats-inside.component';
+import { SpecialsComponent }        from './pages/specials/specials.component';
+import { GalleyComponent }          from './pages/galley/galley.component';
+import { GalleryComponent }         from './pages/gallery/gallery.component';
+import { PadiClubComponent }        from './pages/padi-club/padi-club.component';
+import { DiveShopComponent }        from './pages/dive-shop/dive-shop.component';
+import { DiveBuddyComponent }       from './pages/dive-buddy/dive-buddy.component';
+import { DiveNewsComponent }        from './pages/dive-news/dive-news.component';
+import { ChartersComponent }        from './pages/charters/charters.component';
+import { FindUsComponent }          from './pages/find-us/find-us.component';
+
+import { NotFoundComponent }        from './pages/not-found/not-found.component';
 
 const routes: Routes = [
     {
@@ -39,6 +51,87 @@ const routes: Routes = [
             {   path: "", component: SidebarLeftComponent, outlet: "sidebar2" }
         ]
     },
+    { 
+        path: "Specials", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: SpecialsComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "Galley", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: GalleyComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "PADIClub", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: PadiClubComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "Gallery", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: GalleryComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "DiveShop", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: DiveShopComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "DiveBuddy", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: DiveBuddyComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "DiveNews", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: DiveNewsComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "Charters", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: ChartersComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
+    { 
+        path: "FindUs", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: FindUsComponent },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
     {   path: "", redirectTo: "/Home", pathMatch: "full" },
     {   path: "**", redirectTo: "/Home" }
 ];
@@ -64,7 +157,7 @@ export class AppRoutingModule implements AfterViewChecked, OnDestroy {
                     }
                 }
             }
-            });
+        });
     }
     public ngAfterViewChecked() {
         
@@ -79,17 +172,17 @@ export const navRoutes: navRoute = [
                 { display: "Home", routeStr: "Home" },
                 { display: "Dive Log", routeStr: "DiveLog" },
                 { display: "What's Inside", routeStr: "WhatsInside" },
-                { display: "Specials", routeStr: "WhatsInside" },
-                { display: "Galley", routeStr: "WhatsInside" },
+                { display: "Specials", routeStr: "Specials" },
+                { display: "Galley", routeStr: "Galley" },
                 //{ display: "Food", routeStr: "WhatsInside" },
-                { display: "P.A.D.I. Club", routeStr: "WhatsInside" },
-                { display: "Gallery", routeStr: "WhatsInside" },
+                { display: "P.A.D.I. Club", routeStr: "PADIClub" },
+                { display: "Gallery", routeStr: "Gallery" },
                 //{ display: "Photos", routeStr: "WhatsInside" },
-                { display: "Dive Shop", routeStr: "WhatsInside" },
-                { display: "Dive Buddy", routeStr: "WhatsInside" },
+                { display: "Dive Shop", routeStr: "DiveShop" },
+                { display: "Dive Buddy", routeStr: "DiveBuddy" },
                 //{ display: "Mobile App", routeStr: "WhatsInside" },
-                { display: "Dive News", routeStr: "WhatsInside" },
-                { display: "Charters", routeStr: "WhatsInside" },
+                { display: "Dive News", routeStr: "DiveNews" },
+                { display: "Charters", routeStr: "Charters" },
                 //{ display: "Reservations", routeStr: "WhatsInside" },
-                { display: "Find Us", routeStr: "WhatsInside" }
+                { display: "Find Us", routeStr: "FindUs" }
             ];

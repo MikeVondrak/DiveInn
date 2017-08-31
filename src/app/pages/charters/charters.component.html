@@ -1,0 +1,74 @@
+<app-content-box title="">  
+  <app-content-layout-2col>
+    <div left>
+      <app-text-section>
+        <h1 class="splitTitle">CHARTER YOUR <span>PRIVATE PARTY</span></h1>
+        <h2 class="subTitle">A Preponderence of Private Party Possibilities</h2>
+        <p>Whether it's a chill afternoon with a few mates or an organized night for 100+, Dive Inn has options to create your perfect party space.</p>
+        <p>Smaller groups of up to 13 people can spend the day at sea in your own speedboat, parked right next to the main bar. 
+          For larger events you can reserve any number of areas, including bars, patios, and game rooms.</p>
+        <ul>
+          <li>
+            Party Boat
+          </li>
+          <li>Reservable Areas</li>
+          <li>Reservation Form - phase 2?</li>
+        </ul>
+        <app-in-page-nav [routeFragmentTextPairs]="[
+          {display: 'Party Boat', fragment: 'PartyBoat'},
+          {display: 'Reservable Rooms', fragment: 'ReserveRooms'}]">
+        </app-in-page-nav>
+        <p>Reservation Form??</p>
+      </app-text-section>
+    </div>
+    <div right>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+    </div>
+  </app-content-layout-2col>
+</app-content-box>
+
+<app-content-box title="Party Boat" scrollId="PartyBoat">
+    <app-content-layout-2col flowReverse="true">
+      <div left>
+        <app-text-section>
+          <h2>Take a Cruise with Your Crew</h2>
+          <p>There's nothing like a relaxing day on the lake, and when that lake is a bar you don't even have to worry about packing the cooler.</p>
+          <ul>
+            <li>18' speedboat with working lights and horn</li>
+            <li>Private seating for up to 13 people</li>
+            <li>Rent for a full or half day</li>
+            <li>**Onboard webcam lets you share your adventures**</li>
+            <li>Wii Bass Pro Fishing available ??</li>
+            <li>Free hour and a $25 gift card on your birthday!
+                Join the P.A.D.I. Club for these benefits and more.</li>
+          </ul>
+          <a href="#">Charter the Party Boat</a>
+        </app-text-section>
+      </div>
+      <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+    </app-content-layout-2col>
+  </app-content-box>
+
+  <app-content-box title="Reserveable Rooms" scrollId="ReserveRooms">
+    <app-content-layout-2col>
+      <div left>
+        <app-text-section>
+          <h2>All Kinds of Events</h2>
+          <p>Birthdays, office parties, fundraisers, charity events or game tournaments, Dive Inn's multifunctional space can fit any size and style occassion.</p>
+          <h2>Games</h2>
+          <p>Pool and foosball in the back game room, and free cornhole and table tennis on the patio to entertain your party.</p>
+          <h2>Private Room, Private Tap</h2>
+          <p>The 500sq ft room that usually plays host to table tennis can be converted into a party space for up to 40 people, 
+            with your own private tap line so you can celebrate with your favorite brew.</p>
+          <h2>Pick a Patio</h2>
+          <p>The large interior patio can be used as a seating or gaming area, and the two satellite patios offer even more outdoor space.</p>
+          <a href="#">Reserve Your Party Space</a>
+        </app-text-section>
+      </div>
+      <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+    </app-content-layout-2col>
+  </app-content-box>

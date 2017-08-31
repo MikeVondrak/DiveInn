@@ -1,11 +1,11 @@
 <nav *ngIfMediaQuery="'(min-width: 600px)'"><!-- todo: change this from hardcoded value -->
   <ul class="signPosts">
-    <li *ngFor="let nr1 of _navRoutes">
+    <li *ngFor="let nr of _navRoutes">
     </li>
   </ul>
   <ul class="signs">
-      <li *ngFor="let nr2 of _navRoutes">
-          <a [routerLink]="'../' + nr2.routeStr">{{nr2.display}}</a>
+      <li *ngFor="let nr of _navRoutes">
+          <a [routerLink]="'../' + nr.routeStr" [routerLinkActive]="['active']">{{nr.display}}</a>
       </li>
     </ul>
 </nav>

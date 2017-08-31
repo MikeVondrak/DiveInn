@@ -20,24 +20,34 @@ import { Layout3columnsComponent }    from './layout/layout3columns/layout3colum
 import { SidebarLeftComponent }       from './sidebars/sidebar-left/sidebar-left.component';
 import { SidebarRightComponent }      from './sidebars/sidebar-right/sidebar-right.component';
 
-// nav is part of center column for primary layout
-// todo: collapse to mobile menu
+// main nav is part of center column for primary layout
 import { NavMainComponent }           from './nav/nav-main/nav-main.component'
+
+// page content layouts
+import { ContentLayout2ColComponent }     from './pages/shared/content-layouts/content-layout-2col/content-layout-2col.component';
+
+// page shared components
+import { ContentBoxComponent }        from './pages/shared/content-box/content-box.component';
+import { TextSectionComponent }       from './pages/shared/content-sections/text-section/text-section.component';
+import { ImageSectionComponent }      from './pages/shared/content-sections/image-section/image-section.component';
+import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.component';
+import { CalloutComponent }           from './sidebars/callout/callout.component';
 
 // pages
 import { HomeComponent }              from './pages/home/home.component';
 import { DiveLogComponent }           from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.component';
-import { ContentBoxComponent }        from './pages/shared/content-box/content-box.component';
-import { CalloutComponent }           from './sidebars/callout/callout.component';
-import { ContentLayout2ColComponent }     from './pages/shared/content-layouts/content-layout-2col/content-layout-2col.component';
+import { SpecialsComponent }          from './pages/specials/specials.component';
+import { GalleyComponent }            from './pages/galley/galley.component';
+import { GalleryComponent }           from './pages/gallery/gallery.component';
+import { PadiClubComponent }          from './pages/padi-club/padi-club.component';
+import { DiveShopComponent }          from './pages/dive-shop/dive-shop.component';
+import { DiveBuddyComponent }         from './pages/dive-buddy/dive-buddy.component';
+import { DiveNewsComponent }          from './pages/dive-news/dive-news.component';
+import { ChartersComponent }          from './pages/charters/charters.component';
+import { FindUsComponent }            from './pages/find-us/find-us.component';
 
 import { NotFoundComponent }          from './pages/not-found/not-found.component';
-
-// todo: remove?
-import { TextSectionComponent }       from './pages/shared/content-sections/text-section/text-section.component';
-import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.component';
-import { ImageSectionComponent } from './pages/shared/content-sections/image-section/image-section.component';
 
 @NgModule({
   imports: [
@@ -65,7 +75,16 @@ import { ImageSectionComponent } from './pages/shared/content-sections/image-sec
     NgIfMediaQuery,
     TextSectionComponent,
     InPageNavComponent,
-    ImageSectionComponent
+    ImageSectionComponent,
+    SpecialsComponent,
+    GalleyComponent,
+    GalleryComponent,
+    PadiClubComponent,
+    DiveShopComponent,
+    DiveBuddyComponent,
+    DiveNewsComponent,
+    ChartersComponent,
+    FindUsComponent
   ],
   providers: [NgIfMediaQuery],
   bootstrap: [AppComponent]

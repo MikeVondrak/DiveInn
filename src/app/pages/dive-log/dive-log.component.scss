@@ -3,19 +3,20 @@
 //div { border: 1px solid green; }
 
 div[left] {
-    margin-bottom: 1em;
+    //margin-bottom: 1em;
     h3 {
-        margin: -1em 0 1em 0;
+        margin: 0em 0 1em 0;
         text-align: right;
     }
-    p { text-align: center; }
+    //p { text-align: center; }
 }
 div[right] {
-    align-self: center;     // center vertically
-    text-align: center;     // center horizontally
-
+    display: flex;
+    height: 100%;
+    
     a {
-        display: inline-block;
+        display: block;
+        margin: auto;
         text-decoration: none;
         color: $color_TextRed;
 
@@ -27,7 +28,7 @@ div[right] {
         h1 {
             text-align: left;
             display: inline-block;
-            margin: 1em 0 0 0.5em;
+            margin: 0.5em 0 0 0.5em;
             line-height: 1;
             vertical-align: top;
         }
