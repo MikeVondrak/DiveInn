@@ -19,7 +19,6 @@ export class ContentLayout2ColComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log("fr " + this.flowReverse);
     //this.orderReverse = this.flowReverse;
   }
 

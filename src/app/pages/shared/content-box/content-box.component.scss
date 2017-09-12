@@ -8,7 +8,7 @@
 
 .contentBox {
     position: relative;
-
+    
     .pageAnchor {
         position: absolute;
         top: -2em;
@@ -54,6 +54,16 @@
         border-bottom: none;
 
         &.contentBox-content-titled { padding-top: 2em; }
+    }
+
+    &:first-child {
+        .contentBox-content {
+            padding-top: 2em;
+            @media screen and (min-width: $width_Screen600) { 
+                padding-top: 1em; 
+                &.contentBox-content-titled { padding-top: 2em; }
+            }
+        }
     }
 
 }

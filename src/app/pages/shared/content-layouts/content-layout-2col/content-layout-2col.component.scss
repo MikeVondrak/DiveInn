@@ -1,6 +1,21 @@
 @import '../../../../../scss_variables.scss';
 
 :host {
+    display: block;
+    @media screen and (min-width: $width_Screen600) { 
+        margin-bottom: 2em;
+    }
+
+    &:last-child {              // last content-layout within content-box
+        margin-bottom: 0;   
+        //border: 1px solid red; 
+        > div {                 // div which gets orderReverse class applied
+            > div:last-child {  // last inner div ('right' of left/right)
+                margin-bottom: 0;
+                //border: 1px solid green;
+            }
+        }
+    }
 
     > div {
 
@@ -17,11 +32,8 @@
         //@media screen and (min-width: $width_Screen600) {}
         //@media screen and (min-width: $width_Screen600) {}
         margin-bottom: 0;
-        @media screen and (min-width: $width_Screen600) { 
-            margin-bottom: 2em;        
-        }
-
-
+        
+        
         > div {
             flex: 1 0 100%;
             min-height: 1px;    // IE11 fix for resized img within nested flex container causing whitespace equal to original image height
@@ -36,7 +48,6 @@
                 margin-bottom: 0;
             }
         }
-
     }
 }
 

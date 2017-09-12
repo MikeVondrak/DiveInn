@@ -12,7 +12,8 @@ header {
         top: 0.5em;
         left: 1em;
 
-        width: 25%;
+        width: 33%;
+        @media screen and (min-width: $width_Screen800) { width: 25%; };
         max-width: 500px;   // native resolution
         max-height: 376px;
     }

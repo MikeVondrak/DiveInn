@@ -23,7 +23,111 @@ $margin_SignPostHigh_Wide: 0em;
 
 $width_NavSignPadding: 4%;      // magic number to align signs w/signposts
 
-nav {
+#subNavContainer {
+    position: relative;
+    z-index: 1;
+    @media screen and (min-width: $width_Screen600) { z-index: 0; }
+
+    h1 {
+        color: $color_TextLt;
+        text-transform: uppercase;
+        //text-shadow: -1px -1px 2px $color_TextRed, -1px -1px 1px $color_TextRed;//, 0px 0px 10px #f99;
+        text-shadow: -1px 3px 2px $color_DiveRedDark, 1px 3px 2px $color_DiveRedDark;//, 0px 0px 10px #f99;
+        background: transparent url('../../../assets/img/contentTitle.png') no-repeat;
+        background-size: 100% 100%;
+        border-radius: 0.15em;
+        //font-size: 125%;
+        cursor: default;
+        padding-top: 0.25em;
+        padding-bottom: 0.1em;
+        padding-left: 0.35em;
+        padding-right: 0.35em;
+        //box-shadow: 0px 4px 8px $color_DiveRedDark, 0px -2px 4px $color_DiveRedDark;
+        box-shadow: 2px 2px 6px 0px hsla(0,0%,0%,1);
+
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -0.5em;
+        font-size: 2.5em;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+
+    button {
+        position: absolute;
+        right: 0.5em;
+        bottom: -2.5em;
+        border: none;
+
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+        @media screen and (min-width: $width_Screen600) { // move behind first content-box
+            right: 0.1em;
+            bottom: -0.1em;
+            width: 2.0em;
+            height: 2.0em;
+            padding: 0.25em;
+            border-radius: 0.5em 0.5em 0 0;
+        }
+        @media screen and (min-width: $width_Screen640) { width: 2.2em; height: 2.2em; bottom: -0.1em; }
+        @media screen and (min-width: $width_Screen800) { width: 2.5em; height: 2.5em; }
+        @media screen and (min-width: $width_Screen1024) { width: 3.5em; height: 3.5em; padding: 0.35em; }
+        @media screen and (min-width: $width_Screen1440) { width: 3.0em; height: 3.0em; padding: 0.35em; }
+        @media screen and (min-width: $width_Screen1680) { width: 4em; height: 4em; padding: 0.4em; }
+        @media screen and (min-width: $width_Screen1920) { width: 4.5em; height: 4.5em; padding: 0.5em; }
+    
+        background: transparent url('../../../assets/img/subNavBg.png') no-repeat;
+        background-size: 100% 100%;
+
+        //box-shadow: 0px -1px 3px #333;
+        box-shadow: 0px 4px 8px $color_DiveDkGrey, 0px -2px 4px $color_DiveDkGrey;
+
+        //transform: rotateZ(6deg);
+
+        //background: transparent url('../../../assets/img/signPost.png') no-repeat 50% 0;
+        //background-size: $width_SignPost auto;
+        //background-size: 25% auto;
+
+        // img {
+        //     width: 5em;
+        //     height: 5em;
+        //     padding: 0.5em;
+        //     background: transparent url('../../../assets/img/signRight2.png') no-repeat;
+        //     background-size: 100% 100%;
+        // }
+
+        // styles only work for embedded svg
+        svg {
+            position: relative;
+            //width: 4em;
+            width: 100%;
+            height: 100%;
+
+            circle, line, path {
+                stroke: #777;
+                //fill: #ff0000;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            svg {
+                circle, line, path {
+                    stroke: $color_TextRed;
+                    //stroke: #b82929;
+                    //fill: #ff0000;
+                }
+            }
+        }
+    }
+} // subNavContainer
+
+nav#wideNav {
     @if $debug_layout { background: $color_debug4; }
     
     position: relative;
@@ -142,14 +246,15 @@ nav {
                     //font-size: 125%;
                     cursor: default;
                     padding-bottom: 0.25em;
-                    padding-left: 0.9em;
-                    padding-right: 0.9em;
-                    box-shadow: 0px 4px 8px $color_DiveRedDark, 0px -2px 4px $color_DiveRedDark;
+                    padding-left: 0.8em;
+                    padding-right: 0.8em;
+                    //box-shadow: 0px 4px 8px $color_DiveRedDark, 0px -2px 4px $color_DiveRedDark;
+                    box-shadow: 2px 2px 6px 0px hsla(0,0%,0%,1);
                 }
                 //font-size: 1.5em;
-                font-size: 0.9em;
-                @media screen and (min-width: $width_Screen480) { font-size: 0.8em; }
-                @media screen and (min-width: $width_Screen640) { font-size: 0.8em; }
+                font-size: 0.8em;
+                @media screen and (min-width: $width_Screen640) { font-size: 0.85em; }
+                @media screen and (min-width: $width_Screen768) { font-size: 0.95em; }
                 @media screen and (min-width: $width_Screen800) { font-size: 1.0em; }
                 @media screen and (min-width: $width_Screen960) { font-size: 1.1em; }
                 @media screen and (min-width: $width_Screen1024) { font-size: 1.2em; }
@@ -160,7 +265,52 @@ nav {
                 @media screen and (min-width: $width_Screen2560) { font-size: 1.5em; }
             }
         }
+    }
+} // nav#wideNav
 
-        
+nav#overlayNav {
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    top: 0; right: 0; bottom: 0; left: 0;
+    //border: 1px solid red;
+    background: hsla(0,0,0,0.7);
+
+    ul {
+        max-height: 90%;
+        overflow-y: auto;
+        font-size: 120%;
+        font-weight: bold;
+        //text-align: center;
+        display: inline-block;
+        list-style-type: none;
+        margin: auto;
+        padding: 1em;
+        color: $color_TextLt;
+        //background: $color_DiveDkGrey url('../../../assets/img/stripe1.png');
+        background: $color_SectionBg url('../../../assets/img/stripe1.png');
+        border: 3px solid $color_DiveLtGrey;
+        border-radius: 0.5em;
+        box-shadow: 0px 0px 15px #000;
+
+        li {
+            &.active {
+                background: $color_DiveRed;
+                border-radius: 0.5em;
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+                padding: 0.5em;
+                &.active {
+                    color: $color_TextLt;
+                    cursor: default;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
 }
