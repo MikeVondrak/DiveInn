@@ -285,7 +285,7 @@ nav#overlayNav {
         display: inline-block;
         list-style-type: none;
         margin: auto;
-        padding: 1em;
+        padding: 0;
         color: $color_TextLt;
         //background: $color_DiveDkGrey url('../../../assets/img/stripe1.png');
         background: $color_SectionBg url('../../../assets/img/stripe1.png');
@@ -296,7 +296,7 @@ nav#overlayNav {
         li {
             &.active {
                 background: $color_DiveRed;
-                border-radius: 0.5em;
+                border-radius: 0.25em;
             }
 
             a {
@@ -305,6 +305,7 @@ nav#overlayNav {
                 padding: 0.5em;
                 &.active {
                     color: $color_TextLt;
+                    text-shadow: 1px 1px 3px #444;
                     cursor: default;
                     &:hover {
                         text-decoration: none;

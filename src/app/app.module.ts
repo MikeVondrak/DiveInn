@@ -34,6 +34,7 @@ import { InPageNavComponent }         from './nav/in-page-nav/in-page-nav.compon
 import { CalloutComponent }           from './sidebars/callout/callout.component';
 
 // pages
+import { NotFoundComponent }          from './pages/not-found/not-found.component';
 import { HomeComponent }              from './pages/home/home.component';
 import { DiveLogComponent }           from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.component';
@@ -47,7 +48,10 @@ import { DiveNewsComponent }          from './pages/dive-news/dive-news.componen
 import { ChartersComponent }          from './pages/charters/charters.component';
 import { FindUsComponent }            from './pages/find-us/find-us.component';
 
-import { NotFoundComponent }          from './pages/not-found/not-found.component';
+
+import { LiveCamsComponent }          from './pages/live-cams/live-cams.component';
+import { BoatComponent }              from './pages/live-cams/boat/boat.component';
+import { SunsetComponent }            from './pages/live-cams/sunset/sunset.component';
 
 @NgModule({
   imports: [
@@ -84,7 +88,10 @@ import { NotFoundComponent }          from './pages/not-found/not-found.componen
     DiveBuddyComponent,
     DiveNewsComponent,
     ChartersComponent,
-    FindUsComponent
+    FindUsComponent,
+    LiveCamsComponent,
+    BoatComponent,
+    SunsetComponent
   ],
   providers: [NgIfMediaQuery],
   bootstrap: [AppComponent]

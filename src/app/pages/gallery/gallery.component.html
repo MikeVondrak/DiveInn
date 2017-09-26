@@ -2,19 +2,44 @@
   <app-content-layout-2col>
     <div left>
       <app-text-section>
-        <h1 class="splitTitle"><span>PHOTO</span> GALLERY</h1>
-        <h2 class="subTitle">Pictures of our Previous Parties</h2>
-        <p>PHASE ONE CHANGE COPY TO "COMING SOON"</p>
+        <h1 class="splitTitle">DIVE <span>SIGHTINGS</span></h1>
+        <h2 class="subTitle">Dive Inn fans checking in from around the world</h2>
+        <p>The Dive Inn has grown from a bar into a community. Here we celebrate fans that have shown their Dive pride from their travels across the world.</p>
+        <p>PHASE ONE CHANGE COPY TO "COMING SOON"?</p>
+
         <ul>
           <li>Google images / picassa?</li>
           <li>modal popup with next/prev?</li>
           <li>Submit your own photo - later phase</li>
           <li>Other details?</li>
         </ul>
+
+        <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Dive Abroad', fragment: 'DiveAbroad'},
+                                                    {display: 'Dive Inside', fragment: 'DiveInside'},
+                                                    {display: 'Bumper Stickers', fragment: 'BumperStickers'},
+                                                    {display: 'Gone Fishin', fragment: 'GoneFishin'}]">
+        </app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
+
       </app-text-section>
     </div>
     <div right>
       <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
+</app-content-box>
+
+<app-content-box title="Dive Abroad" scrollId="DiveAbroad">
+  <h1>Photos of Dive Inn gear from outside Denver</h1>
+</app-content-box>
+
+<app-content-box title="Dive Inside" scrollId="DiveInside">
+  <h1>Photos of Dive Inn gear from inside Dive</h1>
+</app-content-box>
+  
+<app-content-box title="Bumper Stickers" scrollId="BumperStickers">
+  <h1>Photos of Dive Inn bumper stickers</h1>
+</app-content-box>
+
+<app-content-box title="Gone Fishin'" scrollId="GoneFishin">
+  <h1>Photos of Dive Inn fans catching fish</h1>
 </app-content-box>

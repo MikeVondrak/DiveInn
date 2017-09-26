@@ -1,17 +1,28 @@
-<app-content-box title="">
-  <h1 class="biColorText">
-    Section-y <span>Title gjpq...</span>
-  </h1>
-  <h1>Header 1</h1>
-  <h2>Header 2</h2>
-  <h3>Header 3</h3>
-  <p>Content</p><p>Content</p><p>Content</p><p>Content</p><p>Content</p>
-</app-content-box>
-<app-content-box title="Title">
-  <h3>Header 3</h3>
-  <p>Content</p><p>Content</p><p>Content</p><p>Content</p><p>Content</p>
-</app-content-box>
-<app-content-box title="">
-  <h3>Header 3</h3>
-  <p>Content</p><p>Content</p><p>Content</p><p>Content</p><p>Content</p>
+<app-content-box title="">      
+    <app-content-layout-2col>      
+      <div left><!-- transcluded content -->
+        <app-text-section>
+          <h1 class="splitTitle">WELCOME TO <span>DIVE INN</span></h1>
+          <h2 class="subTitle">Dive Bar &#8226; Sports Bar &#8226; Games Bar</h2>
+          <p>Dive Inn is copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy copy</p>
+          <!-- <h1 class="biColorText">Drink <span>Specials</span></h1>
+          <h1 class="biColorText"><span>Cluck</span> Chicken</h1>
+          <h1 class="biColorText">Bar <span>Games</span></h1>
+          <h1 class="biColorText">Live <span>Sports</span></h1>
+          <h1 class="biColorText"><span>Find</span> Us</h1> -->
+          <h1 class="biColorText">Drink Specials</h1>
+          <h1 class="biColorText">Cluck Chicken</h1>
+          <h1 class="biColorText">Bar Games</h1>
+          <h1 class="biColorText">Live Sports</h1>
+          <h1 class="biColorText">Special Events</h1>
+          <h1 class="biColorText">Find Us</h1>
+          <p>1380 S Broadway (gmaps link)</p>
+        </app-text-section>
+      </div>
+      <div right><!-- transcluded content -->
+        <h1>Photo Slideshow</h1>
+        <h1>Video Tour</h1>
+        <h1>Boat Cam</h1>
+      </div>  
+  </app-content-layout-2col>  
 </app-content-box>

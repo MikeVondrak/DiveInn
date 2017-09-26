@@ -17,4 +17,66 @@ header {
         max-width: 500px;   // native resolution
         max-height: 376px;
     }
+
+    a.callout {
+        display: inline-block;
+        position: relative;
+        left: 60%;
+        transform: translateX(-50%);
+
+        // @media screen and (min-width: $width_Screen640) { left: 30%; }
+        // @media screen and (min-width: $width_Screen768) { left: 31%; }
+        // @media screen and (min-width: $width_Screen800) { left: 32%; }
+        // @media screen and (min-width: $width_Screen960) { left: 33%; }
+        // @media screen and (min-width: $width_Screen1024) { left: 35%; }
+        //width: 30%;
+        top: 1.5em;
+        color: $color_TextLt;
+        
+        padding: 0.5em 1em 0.25em 1em;
+        border: 3px solid;
+        border-radius: 0.5em;
+        background: hsla(0,0,0,0.5);
+        font-size: 130%;
+
+        &:hover { color: $color_DiveRed; }
+
+        h1, p {
+            float: left;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+        }
+        p {
+            display: none;
+            @media screen and (min-width: $width_Screen960) { display: inline; }
+
+            &:hover { text-decoration: underline; }
+            margin: 0.35em 0em 0 1em;
+        }
+    }
+
+    #openHours {
+        float: right;
+        text-align: center;
+        margin: 1em;
+        padding: 0.5em 0.75em;
+
+        text-shadow: -1px 3px 2px $color_DiveRedDark, 1px 3px 2px $color_DiveRedDark;//, 0px 0px 10px #f99;
+        background: transparent url('../../../assets/img/contentTitle.png') no-repeat;
+        background-size: 100% 100%;
+        border-radius: 1.5em;
+        box-shadow: 2px 2px 6px 0px hsla(0,0%,0%,1);
+
+        display: none;
+        font-size: 45%;
+        @media screen and (min-width: $width_Screen480) { display: block; font-size: 50%; }
+        @media screen and (min-width: $width_Screen600) { font-size: 65%; }
+        @media screen and (min-width: $width_Screen640) { font-size: 70%; }
+        @media screen and (min-width: $width_Screen1024) { font-size: 80%; }
+
+        transform: rotateZ(7deg);
+
+        h1, h2 { margin: 0; padding: 0; }
+    }
 }

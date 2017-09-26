@@ -52,10 +52,11 @@ export class NavMainComponent implements OnInit, DoCheck {
     //console.log("page title: " + this._currentPage);
   }
 
-  private toggleOverlayNav() {
+  public toggleOverlayNav() {
     this._showOverlayNav = !this._showOverlayNav;
   }
-  private noToggle() {
-    console.log("no toggle");
+  public noToggle(event: any) {
+    event.stopPropagation();
+    console.log("no toggle: " + event);
   }
 }

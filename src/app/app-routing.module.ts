@@ -8,6 +8,8 @@ import { SidebarLeftComponent }     from './sidebars/sidebar-left/sidebar-left.c
 import { SidebarRightComponent }    from './sidebars/sidebar-right/sidebar-right.component';
 import { NavMainComponent }         from './nav/nav-main/nav-main.component'
 
+import { NotFoundComponent }        from './pages/not-found/not-found.component';
+
 import { HomeComponent }            from './pages/home/home.component';
 import { DiveLogComponent }         from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent }     from './pages/whats-inside/whats-inside.component';
@@ -21,7 +23,10 @@ import { DiveNewsComponent }        from './pages/dive-news/dive-news.component'
 import { ChartersComponent }        from './pages/charters/charters.component';
 import { FindUsComponent }          from './pages/find-us/find-us.component';
 
-import { NotFoundComponent }        from './pages/not-found/not-found.component';
+import { LiveCamsComponent }        from "./pages/live-cams/live-cams.component";
+import { BoatComponent }            from './pages/live-cams/boat/boat.component';
+import { SunsetComponent }          from './pages/live-cams/sunset/sunset.component';
+
 
 const routes: Routes = [
     {
@@ -61,7 +66,7 @@ const routes: Routes = [
         ]
     },
     { 
-        path: "Galley", 
+        path: "Cluck", 
         component: Layout3columnsComponent,
         children: [
             {   path: "", component: GalleyComponent },
@@ -132,6 +137,19 @@ const routes: Routes = [
             {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
         ]
     },
+    { 
+        path: "LiveCams", 
+        component: Layout3columnsComponent,
+        children: [
+            {   path: "", component: LiveCamsComponent,
+                children: [
+                    {   path: "Boat", component: BoatComponent },
+                    {   path: "Sunset", component: SunsetComponent }
+                ] },
+            {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
+            {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
+        ]
+    },
     {   path: "", redirectTo: "/Home", pathMatch: "full" },
     {   path: "**", redirectTo: "/Home" }
 ];
@@ -167,15 +185,17 @@ export class AppRoutingModule implements AfterViewChecked, OnDestroy {
     }
 }
 export const routingComponents = [HomeComponent, DiveLogComponent, WhatsInsideComponent];
+
+// routes for main navigation (signposts)
 export type navRoute = Array<{display: string, routeStr: string}>;
 export const navRoutes: navRoute = [
                 { display: "Home", routeStr: "Home" },
                 { display: "Dive Log", routeStr: "DiveLog" },
                 { display: "What's Inside", routeStr: "WhatsInside" },
                 { display: "Specials", routeStr: "Specials" },
-                { display: "Galley", routeStr: "Galley" }, //{ display: "Food", routeStr: "WhatsInside" },
+                { display: "Menu", routeStr: "Cluck" }, //{ display: "Food", routeStr: "WhatsInside" },
                 { display: "P.A.D.I. Club", routeStr: "PADIClub" },
-                { display: "Gallery", routeStr: "Gallery" }, //{ display: "Photos", routeStr: "WhatsInside" },
+                { display: "Sightings", routeStr: "Gallery" }, //{ display: "Photos", routeStr: "WhatsInside" },
                 { display: "Dive Shop", routeStr: "DiveShop" },
                 { display: "Dive Buddy", routeStr: "DiveBuddy" }, //{ display: "Mobile App", routeStr: "DiveBuddy" },
                 { display: "Dive News", routeStr: "DiveNews" },
