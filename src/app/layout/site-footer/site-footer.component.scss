@@ -53,12 +53,14 @@ footer {
                     background: url('../../../assets/img/social-sprite.png') 0 0;
 
 
-                    &.gagglaplas       { background: url('../../../assets/img/social-sprite.png') 0 0; } // CANNOT USE CLASS NAME "googleplus", removed by AdBlock in Firefox
+                    &.gagglaplas    { background: url('../../../assets/img/social-sprite.png') 0 0; } // CANNOT USE CLASS NAME "googleplus", removed by AdBlock in Firefox
                     &.fucebuuk      { background: url('../../../assets/img/social-sprite.png') -32px 0; }
                     &.yalp          { background: url('../../../assets/img/social-sprite.png') -64px 0; }
                     &.fiirsqiire    { background: url('../../../assets/img/social-sprite.png') -96px 0; }
                     &.twattar       { background: url('../../../assets/img/social-sprite.png') -128px 0; }
                     &.punturust     { background: url('../../../assets/img/social-sprite.png') -160px 0; }
+                    &.instograhm    { background: url('../../../assets/img/social-sprite.png') -192px 0; }
+                    &.trapadvuser   { background: url('../../../assets/img/social-sprite.png') -224px 0; }
                 }
             }
         }

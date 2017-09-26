@@ -1,12 +1,28 @@
 <app-content-box title="">  
-    
-  <app-content-layout-2col>
-    
+  <app-content-layout-2col>  
+      <div left>
+        <app-text-section>
+          <h1 class="splitTitle"><span>EVENTS</span> AT THE DIVE INN</h1>
+          <h2 class="subTitle">Weekly, annualy, or one-off, Dive Inn always has something going on</h2>
+          <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Event Calendar', fragment: 'Calendar'},
+                                                      {display: 'Repeat Events', fragment: 'Repeat'},
+                                                      {display: 'Event Archives', fragment: 'Archives'}]">
+          </app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
+        </app-text-section> 
+      </div>  
+      <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+  </app-content-layout-2col>
+</app-content-box>
+
+<app-content-box title="Events Calendar" scrollId="Calendar" class="calendar">
+  <app-content-layout-2col>  
     <div left>
       <app-text-section>
         <h1 class="splitTitle">DIVE LOG <span>CALENDAR</span></h1>
         <!-- <h2 class="subTitle">Calendar of Events</h2> -->
-        <h2 class="subTitle">Check out what's happening at the Dive Inn</h2>
+        <h2 class="subTitle">Check out what's coming up at the Dive Inn</h2>
 
         <h3>... just not quite yet.</h3>
         <p>We're working on bringing you a live calendar for all of the weekly and special events at Dive Inn, 
@@ -14,14 +30,50 @@
           <a href="https://www.facebook.com/diveinndenver" title="The Dive Inn on Facebook" target="_blank">Facebook Page</a> to find out what's coming up soon!</p>
       </app-text-section>
     </div>
-
     <div right>
       <a href="https://www.facebook.com/diveinndenver" title="The Dive Inn on Facebook" target="_blank">
         <img src="./assets/img/dive_inn_facebook_logo.jpg" width='180px' height='180px' alt="Dive Inn Facebook Link" />
         <h1>The<br/>Dive Inn<br/>on Facebook</h1>
       </a>
     </div>
-
   </app-content-layout-2col>
 </app-content-box>
 
+<app-content-box title="Repeat Events" scrollId="Repeat">  
+  <app-content-layout-2col>  
+      <div left>
+        <app-text-section>
+          <h1 class="splitTitle">Join in the Dive Inn</h1>
+          <h2 class="subTitle">Every Day? &#8226; Every Week &#8226; Every Month</h2>
+          <ul>
+            <li>Crawfish Boil</li>
+            <li>80's Party</li>
+            <li>New Years Eve Party</li>
+            <li>Quarterback Challenge</li>
+            <li>Holiday Hours</li>
+            <li>Bronco Games</li>
+            <li>OSU Games</li>
+          </ul>
+        </app-text-section> 
+      </div>  
+      <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+  </app-content-layout-2col>
+</app-content-box>
+
+<app-content-box title="Event Archives" scrollId="Archives">  
+  <app-content-layout-2col flowReverse="true">  
+      <div left>
+        <app-text-section>
+          <h1 class="splitTitle">Previous Parties</h1>
+          <h2 class="subTitle">Photos from all your former favorites</h2>
+          <p>Initially build from existing dropbox files</p>
+          <p>Ultimately automate w/backend</p>
+        </app-text-section> 
+      </div>  
+      <div right>
+        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      </div>
+  </app-content-layout-2col>
+</app-content-box>

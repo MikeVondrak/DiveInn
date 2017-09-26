@@ -1,0 +1,43 @@
+:host {
+    .appLinks {
+        display: flex;
+        justify-content: space-between;
+
+        > * {
+            flex: 1;
+            margin: auto;
+            text-align: center;
+        }
+
+        #googlePlayLink {
+            img { width: 220px; }
+        }
+        #appStoreLink {
+            padding: 10px;
+            img { width: 200px; }
+        }
+    }
+    #qrCodeLink {
+        margin-top: 1em;
+        text-align: center;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    div[right] {
+        //text-align: center;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        /deep/ img {
+            //border: 3px solid green;
+            flex: 0;
+            width: 360px;
+            margin: auto;
+            border-radius: 0;
+        }
+    }
+}
