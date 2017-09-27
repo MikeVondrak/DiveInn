@@ -3,13 +3,15 @@
     <div left>
       <app-text-section>
         <h1 class="splitTitle">DIVE INN <span>THE NEWS</span></h1>
-        <h2 class="subTitle">Our History &#8226; Our Culture &#8226; Press Reviews</h2>
+        <h2 class="subTitle">Press Reviews &#8226; Our Community &#8226; Our History</h2>
         <p>
-          Dive Inn was born May 5, 2012, the lifelong dream of Mr. Jason Tietjen, and backed by a cavalcade of Denver local investors and industy experts. 
+          Dive Inn was born May 5, 2012, the lifelong dream of Mr. Jason Tietjen and backed by a cavalcade of Denver local industy experts and investors. 
+        </p>
+        <p>
           Anyone that knows Jason knows his passion for creating the perfect entertainment experience, 
           and with a stellar crew of staff the Dive Inn is one of the premiere neighborhood bars on South Broadway.
         </p>
-        <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Dive Inn - The Press', fragment: 'Press'}]"></app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
+        <app-in-page-nav [routeFragmentTextPairs]="[{display: 'See what people have to say about Dive Inn', fragment: 'Press'}]"></app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
       </app-text-section>
     </div>
     <div right>
@@ -19,19 +21,27 @@
   <app-content-layout-2col flowReverse="true">
       <div left>
         <app-text-section>
-          <h2 class="subTitle">Dive Inn &#8226; The Community</h2>
+          <h2 class="biColorText">The Dive Inn Community</h2>
           <p>
-              At the Dive Inn we try to be not just a great bar, but a community presence that improves our neighborhood and beyond. 
-              We're always interested in supporting a good cause, if you have a charitable event we could help out with drop us a line at: 
+            At the Dive Inn we try to be not just a great bar, but a community presence that improves our neighborhood and beyond. 
+            We're always interested in supporting a good cause.
+          </p>
+          <p>
+            If you have a charitable event we could help out with drop us a line at: 
+              
               <a href="mailto:info@DiveInnDenver.com">info@DiveInnDenver.com</a>
           </p>
-          <h2 class='biColorText'>Denver <span>Green School</span></h2>
-          <p>One of our most empassioned causes is Denver Green School, 
-            the dream of a dear departed friend that is dedicated to sustainable practices and a hands-on approach to teaching. 
+          <h3 class='biColorText'><span>Denver Green School</span> - The Science of Sustainability</h3>
+          <!-- <h4>The Science of Sustainability</h4> -->
+          <p>One of our most empassioned causes is <a href="http://www.denvergreenschool.org" target="_blank">Denver Green School</a>, 
+            the dream of a dear departed friend that is dedicated to sustainable practices and a hands-on approach to teaching.</p>
+          
+          <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Read more about Andy\'s Story', fragment: 'AndysStory'}]"></app-in-page-nav>
+
+          <p class="pTopPad">
             Inspiring science at the most potent level and securing our future with bright, 
-            creative minds, Andy Post's vision is carried on at Denver Green School.
+            creative minds, Andy Post's vision is carried on at <a href="http://www.denvergreenschool.org" target="_blank">Denver Green School</a>.
           </p>
-          <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Andy\'s Story', fragment: 'AndysStory'}]"></app-in-page-nav>
         </app-text-section>
       </div>
       <div right>
@@ -44,10 +54,196 @@
   <app-content-layout-2col>
     <div left>
       <app-text-section>
-        <p>Yelp</p>
-        <p>Foursquare</p>
-        <p>Denver A List Winner 2012</p>
-        <p>Other?</p>
+
+        <!-- TODO: remove <b> tags, better way of styling these? 
+          make into "blurb" component, eventually automate from db -->
+
+        <h2>
+          <a href="https://denver.eater.com/maps/best-bars-denver" title="Eater - 30 of Denver's Essential Bars" target="_blank">
+            30 of Denver’s Essential Bars
+          </a>
+        </h2>
+        <p>
+          <b>July 26, 2017</b> - <a href="http://www.eater.com" title="Eater" target="_blank">Eater</a>
+          - Andra Zeppelin &amp; Gigi Sukin
+        </p>
+
+        <h2>
+          <a href="http://diningout.com/denverboulder/flat-out-best-american-style-fried-chicken-in-denver/" title="DiningOut - Flat-Out Best American-Style Fried Chicken in Denver" target="_blank">
+            Flat-Out Best American-Style Fried Chicken in Denver
+          </a>
+        </h2>
+        <p>
+          <b>July 14, 2017</b> - <a href="http://www.diningout.com" title="DiningOut" target="_blank">Dining Out</a>
+          - Lori Midson
+        </p>
+
+        <h2>
+          <a href="http://www.westword.com/best-of/2017/readers-choice/best-dive-bar-8918287" title="Westword - 2017 Best Of Denver – Best Dive Bar" target="_blank">
+            2017 Best Of Denver – Best Dive Bar
+          </a>
+        </h2>
+        <p>
+          <b>July 1, 2017</b> - <a href="http://www.westword.com" title="Westword.com" target="_blank">Westword</a>
+          - Westword
+        </p>
+
+        <h2>
+          <a href="https://denver.eater.com/2017/1/30/14442242/the-cluck-truck-south-broadway-dive-inn" title="DiningOut - Flat-Out Best American-Style Fried Chicken in Denver" target="_blank">
+            The Cluck Truck Goes Brick and Mortar
+          </a>
+        </h2>
+        <p>
+          <b>January 17, 2017</b> - <a href="http://www.eater.com" title="Eater" target="_blank">Eater</a>
+          - Andra Zeppelin
+        </p>
+
+
+      </app-text-section>
+    </div>
+    <div right>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+    </div>
+  </app-content-layout-2col>
+  <app-content-layout-2col flowReverse="true">
+    <div left>
+      <app-text-section>
+
+
+        <h2>
+          <a href="http://www.westword.com/restaurants/the-dive-inn-platt-parks-landlocked-beach-bar-8138795" title="Westord - The Dive Inn: Platt Park's Landlocked Beach Bar" target="_blank">
+            The Dive Inn: Platt Park's Landlocked Beach Bar
+          </a>
+        </h2>
+        <p>
+          <b>August 16, 2016</b> - <a href="http://www.westword.com" title="Westword" target="_blank">Westword</a>
+          - Sarah McGill
+        </p>
+
+        <h2>
+          <a href="http://denver.cbslocal.com/top-lists/top-bars-with-a-patio-in-denver/" title="CBS Denver - Top Bars With A Patio In Denver" target="_blank">
+            Top Bars With A Patio In Denver
+          </a>
+        </h2>
+        <p>
+          <b>May 28, 2016</b> - <a href="http://denver.cbslocal.com" title="CBS Denver" target="_blank">CBS Denver</a>
+          - Kristin Mason
+        </p>
+
+        <h2>
+          <a href="https://www.thrillist.com/drink/denver/highland/the-6-best-dive-bars-in-denver-neighborhood-guide-to-dive-bars" title="Thrillist - The Best Dive Bars In Denver" target="_blank">
+            The Best Dive Bars In Denver
+          </a>
+        </h2>
+        <p>
+          <b>January 22, 2016</b> - <a href="http://www.thrillist.com" title="Thrillist">Thrillist</a>
+          - Molly Martin
+        </p>
+
+        <h2>
+          <a href="http://denver.cbslocal.com/top-lists/a-night-out-on-south-broadway-in-denver/" title="CBS Denver - A Night Out On South Broadway In Denver" target="_blank">
+            A Night Out On South Broadway In Denver
+          </a>
+        </h2>
+        <p>
+          <b>April 13, 2015</b> - <a href="http://denver.cbslocal.com" title="CBS Denver" target="_blank">CBS Denver</a>
+          - Lonza Dennis
+        </p>
+
+        
+      </app-text-section>
+    </div>
+    <div right>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+    </div>
+  </app-content-layout-2col>
+  <app-content-layout-2col>
+    <div left>
+      <app-text-section>
+
+
+        <h2>
+          <a href="http://www.westword.com/restaurants/the-ten-best-winter-patios-in-denver-6047013" title="Westword - The Ten Best Winter Patios in Denver" target="_blank">
+            The Ten Best Winter Patios in Denver
+          </a>
+        </h2>
+        <p>
+          <b>November 4, 2014</b> - <a href="http://www.westword.com" title="Westword" target="_blank">Westword</a>
+          - Kristin Pazulski
+        </p>
+
+        <h2>
+          <a href="http://denveralist.cityvoter.com/best/neighborhood-bar/nightlife/denver/slideshow/2013?utm_source=bizprof&utm_medium=site&utm_campaign=bp-awardlist" title="CityVoter - Neighborhood Bar - 2012 Winners" target="_blank">
+            Neighborhood Bar - 2013 Winners
+          </a>
+        </h2>
+        <p>
+          <b>August 29, 2013</b> - <a href="http://denveralist.cityvoter.com" title="CityVoter">CityVoter</a>
+          - Andra
+        </p>
+
+        <h2>
+          <a href="http://www.westword.com/restaurants/denvers-ten-best-new-bars-of-2012-5764602" title="Westword -Denver's ten best new bars of 2012" target="_blank">
+            Denver's ten best new bars of 2012
+          </a>
+        </h2>
+        <p>
+          <b>March 20, 2013</b> - <a href="http://www.westword.com" title="Westword" target="_blank">Westword</a>
+          - Danielle Lirette
+        </p>
+
+        <h2>
+          <a href="https://www.thrillist.com/drink/denver/co/80210/south-broadway/dive-inns-new-menu_bar-food_mexican_type/cuisine_feature/occasion" title="Thrillist - Mexican Eats At A S Broadway Bar" target="_blank">
+            Mexican Eats At A S Broadway Bar
+          </a>
+        </h2>
+        <p>
+            <b>December 10, 2012</b> - <a href="http://www.thrillist.com" title="Thrillist">Thrillist</a>
+          - Thrillist
+        </p>
+
+
+      </app-text-section>
+    </div>
+    <div right>
+      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+    </div>
+  </app-content-layout-2col>
+  <app-content-layout-2col flowReverse="true">
+    <div left>
+      <app-text-section>
+
+
+        <h2>
+          <a href="http://denveralist.cityvoter.com/best/neighborhood-bar/nightlife/denver/slideshow/2012?utm_source=bizprof&utm_medium=site&utm_campaign=bp-awardlist" title="CityVoter - Neighborhood Bar - 2012 Winners" target="_blank">
+            Neighborhood Bar - 2012 Winners
+          </a>
+        </h2>
+        <p>
+          <b>August 30, 2012</b> - <a href="http://denveralist.cityvoter.com" title="CityVoter">CityVoter</a>
+          - CityVoter
+        </p>
+
+        <h2>
+          <a href="http://www.westword.com/restaurants/dive-inn-takes-the-plunge-in-former-bjs-carousel-space-5744165" title="Westword - Dive Inn takes the plunge in former BJ's Carousel space" target="_blank">
+            Dive Inn takes the plunge in former BJ's Carousel space
+          </a>
+        </h2>
+        <p>
+            <b>May 11, 2012</b> - <a href="http://www.westword.com" title="Westword" target="_blank">Westword</a>
+          - Jon Solomon
+        </p>
+
+        <!-- <h2>
+          <a href="" title="" target="_blank">
+            The
+          </a>
+        </h2>
+        <p>
+          <b>January 17, 2017</b> - <a href="" title="">Eater</a>
+          - Andra
+        </p> -->
+          
       </app-text-section>
     </div>
     <div right>
@@ -64,16 +260,18 @@
         <h3>1975 - 2008</h3>
         <p>On June 18, 2008, we lost a very special friend of ours. His name was Andy Post.</p>
         <p>
-          Andy was a recent graduate of the Principal Licensure Program at the University of Denver and worked as an Assistant Principal at Cheltenham Elementary School here in Denver. 
+          Andy was a recent graduate of the Principal Licensure Program at the University of Denver and worked as an Assistant Principal at Cheltenham Elementary School<!-- here in Denver-->. 
           An avid fly fisherman, extreme skier, and mountain biker, Andy loved everything nature had to offer in Colorado. 
-          Above all, he was passionate about educating children and the environment. 
+          Above all, he was passionate about the environment, and loved educating children about science.
+        </p>
+        <p>
           He planned to launch a “Green” school in Denver with the goal of fostering lifelong learners who would work together for a sustainable future. 
           Andy was following in the footsteps of his parents and grandparents, who taught in Denver Public Schools for over 100 years.
         </p>
       </app-text-section>
     </div>
     <div right>
-      <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+      <app-image-section imageUrl="./assets/img/andys-story/Andy0.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
     </div>
   </app-content-layout-2col>
   <app-content-layout-2col>
@@ -82,23 +280,28 @@
           <p>
             A dedicated group of educators carried on Andy’s dream and the mission to have “hands-on, brains-on” learning environment help children connect sustainability to their daily lives. 
             Andy was part of this original group of founding partners, 
-            but when he died the remaining seven partners continued the work and in 2010 Andy’s dream of a “Green” school became a reality. 
+            but when he died the remaining seven partners continued the work and in 2010 Andy’s dream of a “Green” school became a reality.
+            </p>
+            <p>
             The Denver Green School (DGS) opened its doors in southeast Denver as the first school to be focused on sustainability in the whole district. 
             Since then, the school has done some amazing things to create the future Andy dreamed of for many years. 
             The students have tackled many important sustainability projects and the school has been recognized by the White House as one of only three schools in the state and 78 schools in the country to receive a Green Ribbon Schools award.
           </p>
+          <h3>Donate at the Dive - Ring the Bell</h3>
           <p>
             If you are reading this and you are so moved, we ask you to 
             <a href="#">ring the bell</a> and donate $1.00 (or more). 
             We assure you, this dollar will go a long way to support Andy’s vision and that of the original founding partners. 
-            Your donation will empower students to work towards a bright sustainable future. 
+            Your donation will empower students to work towards a bright sustainable future.
+            </p>
+            <p>
             This dollar will allow DGS to expand the state’s only “farm to cafeteria” program and allow students to eat healthy lunches from organic veggies grown just 200 yards from our lunchroom. 
             It will also go toward technology for the students to purchase much needed computers, iPads and Google Chrome Books.
           </p>
         </app-text-section>
       </div>
       <div right>
-        <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+        <app-image-section imageUrl="./assets/img/andys-story/Andy2.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
       </div>
     </app-content-layout-2col>
     <app-content-layout-2col flowReverse="true">
@@ -107,14 +310,14 @@
             <p>
                 DGS is an innovation school, serving students from preschool to 8th grade. To learn more about DGS, or get involved with this amazing school, you can:
             </p>
-            <p>Visit the website at <a href="www.denvergreenschool.org">www.denvergreenschool.org</a>,</p>
-            <p>check us out <a href="https://www.facebook.com/denvergreenschool">on Facebook</a>,</p>
+            <p>Visit the website at <a href="http://www.denvergreenschool.org" target="_blank">http://www.denvergreenschool.org</a>,</p>
+            <p>check us out <a href="https://www.facebook.com/denvergreenschool" target="_blank">on Facebook</a>,</p>
             <p>or call <a href="#">720-424-7480</a></p><!-- todo: how to keep # up to date, tel link -->
-            <p>Thanks from all of us at the Dive Inn and the Denver Green School</p>
+            <p>Thanks from all of us at the Dive Inn and the Denver Green School.</p>
           </app-text-section>
         </div>
         <div right>
-          <app-image-section imageUrl="./assets/img/Dive-Inn-Exterior.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
+          <app-image-section imageUrl="./assets/img/andys-story/Andy1.jpg" imageAlt="Dive Inn Exterior at Night" imgTitle="Dive Inn Exterior - Night"></app-image-section>
         </div>
       </app-content-layout-2col>
 </app-content-box>
