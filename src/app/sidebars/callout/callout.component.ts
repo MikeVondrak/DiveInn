@@ -17,7 +17,7 @@ export class CalloutComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
   ngAfterViewInit() {
-    console.log("Callout: " + this.title + "  " + this.copyText + "  src=" + this.imgSrc + "  alt=" + this.imgAlt);
+    //console.log("Callout: " + this.title + "  " + this.copyText + "  src=" + this.imgSrc + "  alt=" + this.imgAlt);
   }
 
 }

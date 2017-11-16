@@ -165,7 +165,7 @@ export class AppRoutingModule implements AfterViewChecked, OnDestroy {
     private subscription: Subscription;
     constructor(router:Router) {
         this.subscription = router.events.subscribe(s => {
-            console.log("Router event: " + s.toString);
+            //console.log("Router event: " + s.toString);
             if (s instanceof NavigationEnd) {
                 const tree = router.parseUrl(router.url);
                 if (tree.fragment) {

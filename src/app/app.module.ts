@@ -5,6 +5,12 @@ import { HttpModule }     from '@angular/http';
 
 import { AppRoutingModule }           from './app-routing.module';
 import { AppComponent }               from './app.component';
+
+// services
+import { FlickrService }              from './services/flickr.service';
+import { PhotoService }               from './services/photo.service';
+
+// ngIfMediaQuery for responsive selector
 import { NgIfMediaQuery }             from './directives/angular2-if-media-query.directive';
 
 import { SiteHeaderComponent }        from './layout/site-header/site-header.component';
@@ -24,7 +30,7 @@ import { SidebarRightComponent }      from './sidebars/sidebar-right/sidebar-rig
 import { NavMainComponent }           from './nav/nav-main/nav-main.component'
 
 // page content layouts
-import { ContentLayout2ColComponent }     from './pages/shared/content-layouts/content-layout-2col/content-layout-2col.component';
+import { ContentLayout2ColComponent } from './pages/shared/content-layouts/content-layout-2col/content-layout-2col.component';
 
 // page shared components
 import { ContentBoxComponent }        from './pages/shared/content-box/content-box.component';
@@ -47,7 +53,6 @@ import { DiveBuddyComponent }         from './pages/dive-buddy/dive-buddy.compon
 import { DiveNewsComponent }          from './pages/dive-news/dive-news.component';
 import { ChartersComponent }          from './pages/charters/charters.component';
 import { FindUsComponent }            from './pages/find-us/find-us.component';
-
 
 import { LiveCamsComponent }          from './pages/live-cams/live-cams.component';
 import { BoatComponent }              from './pages/live-cams/boat/boat.component';
@@ -93,7 +98,7 @@ import { SunsetComponent }            from './pages/live-cams/sunset/sunset.comp
     BoatComponent,
     SunsetComponent
   ],
-  providers: [NgIfMediaQuery],
+  providers: [NgIfMediaQuery, FlickrService, PhotoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
