@@ -9,6 +9,7 @@ import { AppComponent }               from './app.component';
 // services
 import { FlickrService }              from './services/flickr.service';
 import { PhotoService }               from './services/photo.service';
+import { FauxtoService }               from './services/fauxto.service';
 
 // ngIfMediaQuery for responsive selector
 import { NgIfMediaQuery }             from './directives/angular2-if-media-query.directive';
@@ -46,7 +47,7 @@ import { DiveLogComponent }           from './pages/dive-log/dive-log.component'
 import { WhatsInsideComponent }       from './pages/whats-inside/whats-inside.component';
 import { SpecialsComponent }          from './pages/specials/specials.component';
 import { GalleyComponent }            from './pages/galley/galley.component';
-import { GalleryComponent }           from './pages/gallery/gallery.component';
+import { SightingsComponent }         from './pages/sightings/sightings.component';
 import { PadiClubComponent }          from './pages/padi-club/padi-club.component';
 import { DiveShopComponent }          from './pages/dive-shop/dive-shop.component';
 import { DiveBuddyComponent }         from './pages/dive-buddy/dive-buddy.component';
@@ -57,6 +58,8 @@ import { FindUsComponent }            from './pages/find-us/find-us.component';
 import { LiveCamsComponent }          from './pages/live-cams/live-cams.component';
 import { BoatComponent }              from './pages/live-cams/boat/boat.component';
 import { SunsetComponent }            from './pages/live-cams/sunset/sunset.component';
+import { PhotoAlbumComponent } from './pages/shared/photo-album/photo-album.component';
+import { PhotoArchiveComponent } from './pages/shared/photo-archive/photo-archive.component';
 
 @NgModule({
   imports: [
@@ -87,7 +90,7 @@ import { SunsetComponent }            from './pages/live-cams/sunset/sunset.comp
     ImageSectionComponent,
     SpecialsComponent,
     GalleyComponent,
-    GalleryComponent,
+    SightingsComponent,
     PadiClubComponent,
     DiveShopComponent,
     DiveBuddyComponent,
@@ -96,9 +99,11 @@ import { SunsetComponent }            from './pages/live-cams/sunset/sunset.comp
     FindUsComponent,
     LiveCamsComponent,
     BoatComponent,
-    SunsetComponent
+    SunsetComponent,
+    PhotoAlbumComponent,
+    PhotoArchiveComponent
   ],
-  providers: [NgIfMediaQuery, FlickrService, PhotoService],
+  providers: [NgIfMediaQuery, FlickrService, PhotoService, FauxtoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

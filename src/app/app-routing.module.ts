@@ -15,7 +15,7 @@ import { DiveLogComponent }         from './pages/dive-log/dive-log.component';
 import { WhatsInsideComponent }     from './pages/whats-inside/whats-inside.component';
 import { SpecialsComponent }        from './pages/specials/specials.component';
 import { GalleyComponent }          from './pages/galley/galley.component';
-import { GalleryComponent }         from './pages/gallery/gallery.component';
+import { SightingsComponent }       from './pages/sightings/sightings.component';
 import { PadiClubComponent }        from './pages/padi-club/padi-club.component';
 import { DiveShopComponent }        from './pages/dive-shop/dive-shop.component';
 import { DiveBuddyComponent }       from './pages/dive-buddy/dive-buddy.component';
@@ -84,10 +84,10 @@ const routes: Routes = [
         ]
     },
     { 
-        path: "Gallery", 
+        path: "Sightings", 
         component: Layout3columnsComponent,
         children: [
-            {   path: "", component: GalleryComponent },
+            {   path: "", component: SightingsComponent },
             {   path: "", component: SidebarLeftComponent, outlet: "sidebar1" },
             {   path: "", component: SidebarRightComponent, outlet: "sidebar2" }
         ]
@@ -195,7 +195,7 @@ export const navRoutes: navRoute = [
                 { display: "Specials", routeStr: "Specials" },
                 { display: "Chicken", routeStr: "Cluck" }, //{ display: "Food", routeStr: "WhatsInside" },
                 { display: "P.A.D.I. Club", routeStr: "PADIClub" },
-                { display: "Sightings", routeStr: "Gallery" }, //{ display: "Photos", routeStr: "WhatsInside" },
+                { display: "Sightings", routeStr: "Sightings" },
                 { display: "Dive Shop", routeStr: "DiveShop" },
                 //{ display: "Dive Buddy", routeStr: "DiveBuddy" }, 
                 { display: "Mobile App", routeStr: "DiveBuddy" },

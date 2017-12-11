@@ -1,0 +1,7 @@
+@import '../../../../scss_variables.scss';
+@import '../../../../scss_mixins.scss';
+
+:host {
+    @include group;
+    img { float: left; }    
+}

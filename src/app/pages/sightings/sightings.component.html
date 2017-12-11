@@ -14,10 +14,10 @@
           <li>Other details?</li>
         </ul>
 
-        <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Dive Abroad', fragment: 'DiveAbroad'},
-                                                    {display: 'Dive Inside', fragment: 'DiveInside'},
-                                                    {display: 'Bumper Stickers', fragment: 'BumperStickers'},
-                                                    {display: 'Gone Fishin', fragment: 'GoneFishin'}]">
+        <app-in-page-nav [routeFragmentTextPairs]="[{display: 'Dive Inside', fragment: 'DiveInside'},
+                                                    {display: 'Dive Abroad', fragment: 'DiveAbroad'},
+                                                    {display: 'Gone Fishin', fragment: 'GoneFishin'},
+                                                    {display: 'Bumper Stickers', fragment: 'BumperStickers'}]">
         </app-in-page-nav><!-- fragment needs to match scrollId of app-content-box -->
 
       </app-text-section>
@@ -28,18 +28,21 @@
   </app-content-layout-2col>
 </app-content-box>
 
+<app-content-box title="Dive Inside" scrollId="DiveInside">
+  <h1>Photos of Dive Inn gear from inside Dive</h1>
+</app-content-box>
+
 <app-content-box title="Dive Abroad" scrollId="DiveAbroad">
   <h1>Photos of Dive Inn gear from outside Denver</h1>
 </app-content-box>
 
-<app-content-box title="Dive Inside" scrollId="DiveInside">
-  <h1>Photos of Dive Inn gear from inside Dive</h1>
-</app-content-box>
-  
-<app-content-box title="Bumper Stickers" scrollId="BumperStickers">
-  <h1>Photos of Dive Inn bumper stickers</h1>
-</app-content-box>
-
 <app-content-box title="Gone Fishin'" scrollId="GoneFishin">
   <h1>Photos of Dive Inn fans catching fish</h1>
+  <!-- todo: don't hardcode ID values -->
+  <!-- <app-photo-album [flickrphotosetid]="'72157665880433279'"></app-photo-album> -->
+  <app-photo-album flickrPhotoSetId="72157665880433279"></app-photo-album>
+</app-content-box>
+
+<app-content-box title="Bumper Stickers" scrollId="BumperStickers">
+  <h1>Photos of Dive Inn bumper stickers</h1>
 </app-content-box>
