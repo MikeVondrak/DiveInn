@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterViewChecked } from '@angular/core';
 
 // service to send 'appReady' event to index.html to remove pre-bootstap loader element
 import { AppReadyEvent } from "./app-ready-event";
@@ -10,10 +10,12 @@ import { AppReadyEvent } from "./app-ready-event";
   providers: [AppReadyEvent]
 })
 
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
-  appReadyEvent: AppReadyEvent;
-  title = 'The Dive Inn';
+  private appReadyEvent: AppReadyEvent;
+  private title = 'The Dive Inn';
+  private viewCheckedOnce: boolean = false;
+
   delayAppReadyEvent = false;
   appReadyEventDelay = 2000;
   
@@ -28,17 +30,31 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     // called once after the first ngAfterContentChecked(), after Angular initializes the component's views and child views
-    if(!this.delayAppReadyEvent) {
-      this.appReadyEvent.trigger();
-      console.log("ngAfterViewInit done");
-    } else {
-      // simulate load time for app
-      console.log("waiting " + this.appReadyEventDelay + "ms to fire appReadyEvent")
-      let self = this;
-      setTimeout(function() { 
-        self.appReadyEvent.trigger();
-        console.log("ngAfterViewInit done");
-      }, this.appReadyEventDelay);
+    console.log("ngAfterViewInit done");
+
+    // if(!this.delayAppReadyEvent) {
+    //   this.appReadyEvent.trigger();
+    //   console.log("ngAfterViewInit done");
+    // } else {
+    //   // simulate load time for app
+    //   console.log("waiting " + this.appReadyEventDelay + "ms to fire appReadyEvent")
+    //   let self = this;
+    //   setTimeout(function() { 
+    //     self.appReadyEvent.trigger();
+    //     console.log("ngAfterViewInit done");
+    //   }, this.appReadyEventDelay);
+    // }
+  }
+
+  ngAfterViewChecked() {
+    console.log("ngAfterViewChecked: viewCheckedOnce=", this.viewCheckedOnce);
+    if(!this.viewCheckedOnce) {
+      setTimeout( () => { 
+            this.appReadyEvent.trigger();
+            console.log("ngAfterViewChecked DONE!");
+          }, 50);
+      //this.appReadyEvent.trigger();
+      this.viewCheckedOnce = true;
     }
   }
 }

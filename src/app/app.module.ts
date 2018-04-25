@@ -60,6 +60,7 @@ import { BoatComponent }              from './pages/live-cams/boat/boat.componen
 import { SunsetComponent }            from './pages/live-cams/sunset/sunset.component';
 import { PhotoAlbumComponent } from './pages/shared/photo-album/photo-album.component';
 import { PhotoArchiveComponent } from './pages/shared/photo-archive/photo-archive.component';
+import { ImageLoaderComponent } from './pages/shared/image-loader/image-loader.component';
 
 @NgModule({
   imports: [
@@ -101,7 +102,8 @@ import { PhotoArchiveComponent } from './pages/shared/photo-archive/photo-archiv
     BoatComponent,
     SunsetComponent,
     PhotoAlbumComponent,
-    PhotoArchiveComponent
+    PhotoArchiveComponent,
+    ImageLoaderComponent
   ],
   providers: [NgIfMediaQuery, FlickrService, PhotoService, FauxtoService],
   bootstrap: [AppComponent]

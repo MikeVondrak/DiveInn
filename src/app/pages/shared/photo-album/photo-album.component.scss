@@ -2,6 +2,25 @@
 @import '../../../../scss_mixins.scss';
 
 :host {
-    @include group;
-    img { float: left; }    
+    //@include group;
+    //img { float: left; }
+
+    // adapted from https://css-tricks.com/seamless-responsive-photo-grid/
+    display: block;
+    line-height: 0;
+    column-count: 6;
+    -webkit-column-count: 6;
+    column-gap: 0px;
+    @media screen and (max-width: $width_Screen1680) { column-count: 5; }
+    @media screen and (max-width: $width_Screen1440) { column-count: 4; }
+    @media screen and (max-width: $width_Screen1024) { column-count: 4; }
+    @media screen and (max-width: $width_Screen800) { column-count: 3; }
+    @media screen and (max-width: $width_Screen600) { column-count: 2; }
+    @media screen and (max-width: $width_Screen480) { column-count: 1; }
+    
+    /deep/ img {
+        //display: inline-block;
+        width: 100%;
+        height: auto;
+    }
 }

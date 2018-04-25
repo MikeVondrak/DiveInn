@@ -169,6 +169,8 @@ export class PhotoService {
   //  get photoset cover photo (primary)? multiple photos?
   //    sightings - use photoSet.getPhotos and display all
   //    archives - use 
+
+  //    https://www.flickr.com/services/api/misc.urls.html
   //    Photo Source URLs
   //    You can construct the source URL to a photo once you know its ID, server ID, farm ID and secret, as returned by many API methods.
   //    The URL takes the following format:
